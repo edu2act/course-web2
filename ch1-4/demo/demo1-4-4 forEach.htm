@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+forEach()函数从头到尾把数组遍历一遍。有三个参数分别是：数组元素，元素的索引，数组本身（如果是一个参数就是数组元素，也就是数组的值。 <br/>
+
+<script type="text/javascript">
+var arr=[1,2,3,4,5,6];
+
+arr.forEach(function(v){
+    //其中的v就是数组的值 123456
+    document.write(v+"<br>");
+})
+
+arr.forEach(function(value,index,arr1){
+     //分别对应：数组元素，元素的索引，数组本身
+    //document.write(arr1[index]+',');
+    document.write('索引值为'+index+'的元素是:'+value+'<br>');
+
+})
+
+</script>
+
+</body>
+</html>

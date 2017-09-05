@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <title> new document </title>  
+	<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;					
+				font-family: arial, 宋体, serif;
+				font-size: 12px;
+			}					
+			#nav {
+				margin-top: 20px;
+				margin-left: 50px;
+				line-height: 24px; 
+				list-style-type: none; 
+				background: #666;
+			}					
+			#nav a:link {
+				display: block; /*改变为块级元素*/
+				width: 80px;
+				text-align: center;
+				color: #666; 
+				text-decoration: none;
+			}					
+			#nav a:hover {
+				color: #FFF;
+				text-decoration: underline;
+				font-weight: bold;
+				background:#999;
+			}
+			#nav li {
+				float: left; 
+				width: 80px; 
+				background: #F0F0F0;
+			}					
+			#nav li ul {
+				line-height: 27px;
+				list-style-type: none;
+				text-align: left;						
+				width: 180px; 						
+				display: none;
+			}
+			#nav li ul li{
+				float: left; 
+				width: 100px;						
+			}
+			#nav li ul a:link {
+				display: block; 
+				width: 75px;
+				text-align: left;
+				padding-left: 24px;
+				color: #666;
+			}							
+			#nav li ul a:hover {
+				color: #F3F3F3;
+				text-decoration: underline;
+				font-weight: normal;
+				background: #C00;
+			}
+			#nav li.sfhover ul {						
+				display: block;
+				position: absolute;
+			}					
+	</style>
+
+	<script type="text/javascript">
+			function subMenu() {
+				var liNodes = document.getElementsByTagName("li");
+						
+				for (var i=0; i<liNodes.length; ++i) {						
+				liNodes[i].onmouseover = function() {
+					  //鼠标经过时设置类名
+						this.className = "sfhover";
+					} //onmouseover()							
+				liNodes[i].onmouseout = function() {
+						//鼠标移开时取消类名
+						this.className = "";
+					} //onmouseout					
+				}	//for		
+			} //subMenu()
+
+			window.onload = subMenu;
+	</script>
+</head>
+
+<body>
+    <ul id="nav">
+		<li><a href="#">主页</a>
+			<ul>
+				<li><a href="#">主页介绍</a></li>
+				<li><a href="#">学历介绍</a></li>
+				<li><a href="#">工作历程</a></li>
+			</ul>
+		</li>
+		<li><a href="#">相册</a>
+			<ul>
+				<li><a href="#">主人相册</a></li>
+				<li><a href="#">最新图集</a></li>
+				<li><a href="#">动感影集</a></li>
+			</ul>
+		</li>
+		<li><a href="#">日志</a>
+			<ul>
+				<li><a href="#">技术精粹</a></li>
+				<li><a href="#">生活点滴</a></li>
+				<li><a href="#">精彩转载</a></li>
+			</ul>
+		</li>
+		<li><a href="#">好友</a>
+			<ul>
+				<li><a href="#">好友介绍</a></li>
+				<li><a href="#">学历介绍</a></li>
+				<li><a href="#">工作历程</a></li>
+			</ul>
+		</li>
+		<li><a href="#">个人资料</a>
+			<ul>
+				<li><a href="#">资料介绍</a></li>
+				<li><a href="#">学历介绍</a></li>
+				<li><a href="#">工作历程</a></li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

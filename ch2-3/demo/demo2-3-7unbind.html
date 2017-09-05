@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery的取消事件绑定</title>
+	<script src="jquery-3.2.1.slim.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#divs").bind("click mouseout",function(){
+				$(this).css("width","200px");
+			});
+			$("#btn").click(function(){
+				$("#divs").unbind("click");
+			})
+			$("#btn2").click(function(){
+				$("#divs").off("mouseout");
+			})
+		});
+	</script>
+</head>
+<body>
+	<div id="divs" style="background-color:#FFEE11;width:400px;height:300px;font-size: 50px;" >鼠标点击</div>
+	<input type="button" style="height: 100px;width: 200px;font-size: 25px;" value="解除点击事件" id="btn" />
+	<input type="button" style="height: 100px;width: 250px;font-size: 25px;" value="解除鼠标移开事件" id="btn2" />
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title> form实例 </title>
+	<style type="text/css">
+		div {
+			float: left;
+		}
+		p#submit {
+			 clear: left;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function() {
+			//获得所有input节点
+			var myInputNodes = document.getElementsByTagName("input");
+			for (var i=0; i<myInputNodes.length; ++i)
+			{
+				//if (myInputNodes[i].getAttribute("type") == "text")
+				if (myInputNodes[i].type=="text")
+				{
+				//聚焦该结点
+					myInputNodes[i].focus();
+					break;
+				} 
+			} 
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<td>用户名：</td>
+				<td><input type="text" id="username"/></td>
+			</tr>
+			<tr>
+				<td>密码：</td>
+				<td><input type="password" id="passwd"/></td>
+			</tr>
+			<tr>
+				<td>确认密码：</td>
+				<td><input type="password" id="rePasswd"/></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					<input type="reset" id="reset" value="重设" />
+					<input id="submit" type="submit" value="提交" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

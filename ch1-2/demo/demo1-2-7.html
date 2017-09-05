@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script type="text/javascript">
+	// 转换成 Number 类型
+		var a = '123.456img';
+		var a1 = parseInt(a);
+		var a2 = parseFloat(a);
+		document.write("a1=" + a1 +'<br/>'+ "a2=" + a2+'<br/>');
+		document.write(typeof a2+'<br/>');
+
+	// 转换成 String 类型
+		var b = 3.1415926;
+		var b1 = b + "";
+		document.write(typeof(b1)+'<br/>');
+
+	// 转换成 Boolean 类型
+		var c = 'img' + 3 + '.jpg';
+		var c1 = !!c;
+		document.write('c1='+c1)
+		alert(typeof c1);
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>遍历对象的属性</title>
+<script type="text/javascript">
+//定义对象
+var dog = {
+	name : "Lili",
+	breed : "Husky",
+	weight : 60,
+	loves : ['eat', 'sleep'],
+
+	jump : function (){
+		alert("She is jumping");
+	}
+}
+
+//遍历对象
+for(var i in dog)
+{
+	//访问每一个属性名
+	alert(i);
+	
+	//访问每一个属性值
+	alert(dog[i]);
+
+	//访问数组的每一个元素
+	if (i == "loves") 
+	{
+		var len = dog[i].length;
+		for (var j=0; j<len ; j++)
+		{
+			alert(dog[i][j]);
+		}
+	}
+}
+
+</script>
+</head>
+</html>

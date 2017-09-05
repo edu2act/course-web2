@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>访问和修改对象的属性</title>
+<script type="text/javascript">
+//定义对象
+var dog = {
+	name : "Lili",
+	breed : "Husky",
+	weight : 60,
+	loves : ['eat', 'sleep'],
+
+	jump : function (){
+		alert("She is jumping");
+	}
+}
+
+//1.访问对象属性
+alert(dog.name);
+alert(dog['breed']);
+
+//2.使用对象方法
+dog.jump();
+
+//3.修改对象属性
+dog.weight = 70;
+//dog.loves.push("2");
+
+</script>
+</head>
+</html>

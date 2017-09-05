@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>test</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<p>点击按钮，测试带有 break 语句的循环。</p>
+		<button onclick="myFunction1()">点击这里</button>
+		<p id="demo1"></p>
+		<br/>
+		<script type="text/javascript">
+			function myFunction1()
+			{
+			var x="",i=0;
+			for (i=0;i<10;i++)
+			  {
+			  if (i==3)
+			    {
+			    break;
+			    }
+			  x=x + "The number is " + i + "<br>";
+			  }
+			document.getElementById("demo1").innerHTML=x;
+			}
+		</script>
+	
+		<p>点击下面的按钮来执行循环，该循环会跳过 i=3 的步进。</p>
+		<button onclick="myFunction2()">点击这里</button>
+		<p id="demo2"></p>
+	
+		<script>
+			function myFunction2()
+			{
+			var x="",i=0;
+			for (i=0;i<10;i++)
+			  {
+			  if (i==3)
+			    {
+			    continue;
+			    }
+			  x=x + "The number is " + i + "<br>";
+			  }
+			document.getElementById("demo2").innerHTML=x;
+			}
+		</script>
+	</body>
+</html>

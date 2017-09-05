@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> 验证表单数据项长度 </title>
+		<meta charset="utf-8" />
+		<script type="text/javascript">
+			//取得表单数据
+			var name = "admin";
+			var password = "a1!";
+			var repwd = "a1哈哈哈!";
+
+			//定义函数
+			function checkLength(checkStr)
+			{
+				if (checkStr.length < 6)
+				{
+					//错误处理
+					alert("长度不够！");
+					return false;
+				}
+				return true;
+			}
+
+			//函数调用
+			checkLength(name);
+			checkLength(password);
+			checkLength(repwd);
+		</script>
+	</head>
+	<body>	
+	</body>
+</html>

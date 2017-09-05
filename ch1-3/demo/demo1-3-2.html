@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> 匿名函数 </title>
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+		
+	</body>
+
+	<script type="text/javascript">	
+			(function (name) {
+				alert('hello ,' + name + "!");
+			})('Mike');
+
+			var add = function(a, b) {
+				return a + b;
+			};
+			
+			var sum = add(1, 2);
+			alert(add(1, 2));
+
+			window.onload = function() {
+				//页面加载完成以后，执行的一系列动作
+			};
+		</script>
+</html>

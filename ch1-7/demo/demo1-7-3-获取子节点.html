@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>获取子节点</title>
+	</head>
+	<body>
+		<div id="news"><h1>新闻动态<span id="time">2016-10-7</span></h1><ul><li>国际新闻</li><li>国内新闻</li><li>娱乐新闻</li><li>体育新闻</li><li>军事新闻</li></ul></div>
+		<script>
+			var node0=document.getElementById('news').childNodes;
+			var node1=document.getElementById('news').childNodes[0];
+			var node2=document.getElementById('news').firstChild;
+			var node3=document.getElementById('news').lastChild;
+			var node4=document.getElementById('news').children;
+			alert(node0.length);
+			alert(node1.innerHTML);
+			alert(node2.innerHTML);
+			alert(node3.innerHTML);
+			alert(node4[1].children.length);
+		</script>
+	</body>
+</html>

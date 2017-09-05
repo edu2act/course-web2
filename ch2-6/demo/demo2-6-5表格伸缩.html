@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery实现表格伸缩效果</title>
+		<style>
+		 	table{ border:0;border-collapse:collapse;
+		 		margin-left:350px;margin-top: 50px;}
+			td{ font:normal 25px/30px Arial;padding:2px;width:150px;}
+			th{ font:bold 25px/30px Arial;text-align:left;
+			      padding:4px;border-bottom:1px solid #333;width:150px;}
+			.parent{ background:#FFF38F;cursor:pointer;}  /* 偶数行样式*/
+			.odd{ background:#FFFFEE;}  /* 奇数行样式*/
+			.selected{ background:#FF6500;color:#fff;}
+		</style>
+		<!--   引入jQuery -->
+		<script src="jquery-3.2.1.slim.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(function(){
+			    $('tr.parent').click(function(){   // 获取所谓的父行
+					$(this)
+					 .toggleClass("selected")   // 添加/删除高亮
+					 .siblings('.child_'+this.id).toggle();  // 隐藏/显示所谓的子行
+				});
+			})
+		</script>
+	</head>
+	
+	<body>
+		<table>
+			<thead>
+				<tr><th>姓名</th><th>性别</th><th>暂住地</th></tr>
+			</thead>
+			<tbody>
+				<tr class="parent" id="row_01"><td colspan="3">前台设计组</td></tr>
+				<tr class="child_row_01"><td>张三</td><td>男</td><td>浙江宁波</td></tr>
+				<tr class="child_row_01"><td>李四</td><td>女</td><td>浙江杭州</td></tr>
+				<tr class="parent" id="row_02"><td colspan="3">前台开发组</td></tr>
+				<tr class="child_row_02"><td>王五</td><td>男</td><td>湖南长沙</td></tr>
+				<tr class="child_row_02"><td>赵六</td><td>男</td><td>浙江温州</td></tr>
+				<tr class="parent" id="row_03"><td colspan="3">后台开发组</td></tr>
+				<tr class="child_row_03"><td>Rain</td><td>男</td><td>浙江杭州</td></tr>
+				<tr class="child_row_03"><td>Rose</td><td>女</td><td>浙江杭州</td></tr>
+			</tbody>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8" />
+  <head>
+    <title>样式表样式的修改与设置</title>
+
+	<style type="text/css">
+	  .div1{
+	    background-color:blue;
+	    height:100px;
+	  }
+	  .div2{
+	    background-color:darkblue;
+		height:100px;
+	  }
+	</style>
+
+	<style type="text/css">
+	  .div3{
+	    background-color:yellow;
+		height:100px;
+	  }
+	</style>
+
+	<script type="text/javascript">
+	function getBgcolorDiv1(){
+		var cssRules=document.styleSheets[0].cssRules ||document.styleSheets[0].rules;
+		var bc=cssRules[0].style.backgroundColor;
+		alert(bc);
+	}
+	function getBgcolorDiv2(){
+	   var cssRules=document.styleSheets[0].cssRules ||document.styleSheets[0].rules;
+	   var bc=cssRules[1].style.backgroundColor;
+	   alert(bc);
+	}
+	function getBgcolorDiv3(){
+	   var cssRules=document.styleSheets[1].cssRules ||document.styleSheets[1].rules;
+	   var bc= cssRules[0].style.backgroundColor;
+	   alert(bc);
+	}
+	</script>
+  </head>
+
+  <body>
+    <div class="div1" id="div1">
+	</div>
+	<input type="button" value="getBgcolorDiv1" onclick="getBgcolorDiv1()" />
+	<div class="div2" id="div2">
+	</div>
+	<input type="button" value="getBgcolorDiv2" onclick="getBgcolorDiv2()" />
+	<div class="div3" id="div3">
+	</div>
+	<input type="button" value="getBgcolorDiv3" onclick="getBgcolorDiv3()" />
+  </body>
+</html>

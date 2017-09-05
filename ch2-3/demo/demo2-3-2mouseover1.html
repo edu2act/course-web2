@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery鼠标事件</title>
+	<script src="jquery-3.2.1.slim.min.js"></script>
+</head>
+<body>
+	<div id="show" style="background-color:#FFEE11;height: 200px;width: 300px;font-size: 50px;">鼠标移动到此处</div>
+	<input type="button" style="height: 100px;width: 250px;font-size: 25px;" value="解除鼠标移开事件" id="btn2" />
+	<script>
+		$("#show").mouseover(function(){
+			$("#show").css("background-color","#33FFEE");
+			alert("鼠标移动结果");
+		});
+		$("#btn2").click(function(){
+				$("#show").unbind("mouseover");
+			})
+	</script>
+</body>
+
+</html>

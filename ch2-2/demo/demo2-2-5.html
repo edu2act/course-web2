@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery选择器</title>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>  
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<script>
+		var jsDivs = document.getElementsByTagName('div');
+		var jqDivs = $('div');
+		console.log( jsDivs );
+		console.log( jqDivs );
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery的bind绑定事件</title>
+	<style>
+		#buts{
+			width:150px;
+			height:100px;
+			font-size:50;
+		}
+	</style>
+	<script src="jquery-3.2.1.slim.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("#buts").bind("click",function(){
+			alert('Bind绑定事件测试');
+		});
+	});
+	</script>
+</head>
+<body>
+	<input type="button" id="buts" value="点击"  />
+</body>
+</html>

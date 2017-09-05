@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>循环语句的练习</title>
+	</head>
+	<body>
+		 <script type="text/javascript">
+			//输出表格标签
+			document.write('<table border="1px" cellpadding="20px">');
+			for (var i=1; i<=4; ++i) {
+				//输出<tr>标签
+				document.write('<tr>');
+				//依次输出4个单元格
+				for (var j=1; j<=4; ++j) {
+					document.write('<td>&nbsp;</td>');
+				}
+				//输出结束的</tr>标签
+				document.write('</tr>');
+			}
+			document.write('</table>');
+		</script> 
+		<!--<script type="text/javascript">
+			document.write('<table border="1px" cellpadding="20px">');
+			var i = 1;
+			while(i<=4) 
+			{
+			    //输出<tr>标签
+			    document.write('<tr>');
+			    //依次输出4个单元格
+			    var j = 1;
+				while(j<=4) 
+				{
+					document.write('<td>&nbsp;</td>');
+					++j;
+				}
+				//输出结束的</tr>标签
+				document.write('</tr>');
+				++i;
+			}
+			document.write('</table>');
+		</script>-->
+	</body>
+</html>

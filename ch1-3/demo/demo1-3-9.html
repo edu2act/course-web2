@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>表单事件</title> 
+		<meta charset="utf-8" />
+		<script type="text/javascript">
+			//失去焦点事件处理函数
+			function blurEventFunc()
+			{
+				alert("blur!");
+			}
+
+			//表单值改变事件处理函数
+			function changeEventFunc()
+			{
+				alert("change!");
+			}
+
+			//表单提交事件处理函数
+			function submitEventFunc()
+			{
+				alert("submit!");
+			}
+		</script>
+    </head>
+
+	<!-- 给body加上加载事件 -->
+    <body>
+        <form onsubmit="submitEventFunc()">
+			<input type="text" value="" onblur="blurEventFunc()" />
+			<br/>
+			<select onchange="changeEventFunc()">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+			</select>
+			<br/>
+			<input type="submit" value="提交" />
+		</form>
+    </body>
+</html>

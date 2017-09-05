@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>增加获得下次播放时间的函数</title>
+<script type="text/javascript">
+var movie1 = {
+	title : "007",
+	type : "谍战",
+	rating : 8,
+	showtime : ["8:00", "13:00", "16:00"],
+	getNextShowing : function() {
+		var now = "10:00";
+		for (var i=0; i<this.showtime.length ; i++)
+		{
+			if (parseInt(now) < parseInt(this.showtime[i]))
+			{
+				alert(this.title + "下一次播放时间是" + this.showtime[i]);
+				break;
+			}
+		}
+	}
+}
+
+var movie2 = {
+	title : "指环王",
+	type : "战争",
+	rating : 9,
+	showtime : ["9:00", "14:00", "19:00"],
+	getNextShowing : function() {
+		var now = "10:00";
+		for (var i=0; i<this.showtime.length ; i++)
+		{
+			if (parseInt(now) < parseInt(this.showtime[i]))
+			{
+				alert(this.title + "下一次播放时间是" + this.showtime[i]);
+				break;
+			}
+		}
+	}
+}
+
+function getNextShowing(movie)
+{
+	var now = "10:00";
+
+	for (var i=0; i<movie.showtime.length ; i++)
+	{
+		if (parseInt(now) < parseInt(movie.showtime[i]))
+		{
+			alert(movie.title + "下一次播放时间是" + movie.showtime[i]);
+			break;
+		}
+	}
+}
+
+getNextShowing(movie1);
+getNextShowing(movie2);
+
+function Movie(title, showtime) {
+	this.title = title;
+	this.showtime = showtime;
+	this.rating = 0;
+	this.type = null;
+	this.getNextShowing = function() {
+		var now = "10:00";
+		for (var i=0; i<this.showtime.length ; i++)
+		{
+			if (parseInt(now) < parseInt(this.showtime[i]))
+			{
+				alert(this.title + "下一次播放时间是" + this.showtime[i]);
+				break;
+			}
+		}
+	}
+}
+var movie3 = new Movie("港囧",['6:00','8:00']);
+var movie4 = new Movie("夏洛特烦恼", ['7:00', '12:00']);
+</script>
+</head>
+</html>

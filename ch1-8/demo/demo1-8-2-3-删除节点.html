@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>删除节点</title>
+	<style type="text/css">
+		div#imgArear {
+			width: 400px;
+			height: 400px;
+			border: 1px solid;
+		}
+	</style>
+	<script type="text/javascript">
+	function addImg(source) {
+		//1. 生成1个图片节点
+		var img = document.createElement("img");			
+		//2. 为该图片节点设置必要属性（图片路径、图片宽度和高度）
+		img.src = source || "images/1.jpg";
+		img.width = 300;
+		img.height = 300;
+		//3. 插入该图片为id="imgArear"的div节点的孩子
+		var div = document.getElementById("imgArear");
+		div.appendChild(img);
+	} 
+	function addText(text) {
+		//1. 生成一个文本节点
+		var text = text || "这是一条金鱼";
+		var txt = document.createTextNode(text);
+		//2. 把该文本节点插入到id="imgArear"的div节点下
+		var div = document.getElementById("imgArear");
+		div.appendChild(txt);
+	} 
+	function changeImg() {
+	//方法一：
+		//1. 删除div节点中的所有孩子节点
+		var div = document.getElementById('imgArear');
+		for (var i=0; i<div.childNodes.length; ++i)
+		{
+			div.removeChild(div.childNodes[i]);
+			--i;
+		}
+		//2. 重新添加图片和文本节点
+		addImg("images/2.jpg");
+		addText("这是一片森林");
+	//方法二：
+		//1. 依次获得div中的所有节点
+		var div = document.getElementById('imgArear');
+		for (var i=0; i<div.childNodes.length; ++i)
+		{
+			//若为<img />标签
+			if (div.childNodes[i].nodeName == "IMG")
+			{
+				var img = div.childNodes[i];
+			}
+			//若为文本节点
+			if (div.childNodes[i].nodeType == 3)
+			{
+				var txt = div.childNodes[i];
+			}
+		}
+		//2. 修改节点属性或文本节点的nodeValue值
+		img.src = "images/2.jpg";
+		txt.nodeValue = "这是一片森林";
+	}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="button" value="添加金鱼图片" onclick="addImg();" />
+		<input type="button" value="添加图片的文字说明" onclick="addText();" />
+		<input type="button" value="替换为草原图片" onclick="changeImg();" />
+	</form>
+	<div id="imgArear">
+	</div>		
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>movie对象中增加获取下次播放时间的对象</title>
+<script type="text/javascript">
+//定义构造函数
+function Movie(title, showtime) {
+	this.title = title;
+	this.showtime = showtime;
+	this.getNextShowing = function(){
+		var now = "10:00";
+		
+		//对象内部，使用this指代本对象
+		for (var i=0; i<this.showtime.length; i++)
+		{
+			if (parseInt(now) < parseInt(this.showtime[i]))
+			{
+				alert(this.title + "下一次播放时间是" + this.showtime[i]);
+				break;
+			}
+		}
+	}
+}
+
+//通过构造函数来创建对象
+var movie1 = new Movie("007", ["8:00", "13:00", "16:00"]);
+var movie2 = new Movie("指环王", ["9:00", "14:00", "19:00"]);
+
+//使用对象
+alert(movie1.title);
+movie1.getNextShowing();
+
+movie2.getNextShowing();
+</script>
+</head>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8" />
+	<title> form实例 </title>
+	<style type="text/css">
+		div {
+			float: left;
+		}
+		select {				
+			height: 100px;
+			width: 100px;
+			margin: 0;				
+		}
+		p#submit {
+			clear: left;
+		}		
+	</style>
+
+	<script>
+		//双向选择列表
+		function moveRight() { 
+			//选中的项目右移
+			var left = document.getElementById("leftSelect");
+			var right = document.getElementById("rightSelect");				
+			//右移
+			for (var i=0; i<left.childNodes.length; ++i) 
+			{//遍历所有子结点
+			var child = left.childNodes[i]; 
+			//获得当前孩子结点					
+				if (child.nodeName == "OPTION" && child.selected)
+				{
+					right.appendChild(left.childNodes[i]);
+					--i; //已经移过去了一项，则i值回减1
+				} 
+			}
+		}
+
+		function moveLeft() { //选中的项目左移
+			var left = document.getElementById("leftSelect");
+			var right = document.getElementById("rightSelect");				
+			//左移
+			for (var i=0; i<right.childNodes.length; ++i) //遍历所有子结点
+			{
+				var child = right.childNodes[i]; //获得当前孩子结点					
+				if (child.nodeName == "OPTION" && child.selected)
+				{
+					left.appendChild(right.childNodes[i]);
+					--i;
+				}
+			}
+		}
+
+		function allToRight() { //所有项目右移
+			var left = document.getElementById("leftSelect");
+			var right = document.getElementById("rightSelect");				
+			//右移
+			for (var i=0; i<left.childNodes.length; ++i) //遍历所有子结点
+			{
+				var child = left.childNodes[i]; //获得当前孩子结点	
+				right.appendChild(left.childNodes[i]);
+				--i;
+			}
+		}
+
+		function allToLeft() { //所有项目左移
+			var left = document.getElementById("leftSelect");
+			var right = document.getElementById("rightSelect");
+			//左移
+			for (var i=0; i<right.childNodes.length; ++i) //遍历所有子结点
+			{
+				var child = right.childNodes[i]; //获得当前孩子结点	
+				left.appendChild(right.childNodes[i]);
+				--i;
+			}
+		}
+	</script>
+	</head>
+
+<body>
+<form>
+	<table>
+	<tr>
+	<td>&nbsp;</td>
+	<td>
+		<div>
+			<select id="leftSelect" multiple="true">
+				<option>选项1</option>
+				<option>选项2</option>
+				<option>选项3</option>
+				<option>选项4</option>
+				<option>选项5</option>
+			</select>
+		</div>
+		<div>
+			<input type="button" value="右移" onclick="moveRight();" /> <br />
+			<input type="button" value="左移" onclick="moveLeft();" />  <br />
+			<input type="button" value="全部右移" onclick="allToRight();" /> <br />
+			<input type="button" value="全部左移" onclick="allToLeft();" />
+		</div>
+		<div>
+			<select id="rightSelect" multiple="true"></select>
+		</div>
+	</td>
+	</tr>
+	<tr>
+	<td>&nbsp;</td>
+	<td><input type="reset" id="reset" name="rePasswd" value="重设" />
+		<input id="submit" type="submit" value="提交" /></td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

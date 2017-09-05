@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8" />
+  <head>
+    <title>行内样式表的设置</title>
+	<style type = "text/css">
+	  .container{
+	    height:300px;
+		width:800px;
+		color:white;
+	  }
+	</style>
+	<script type = "text/javascript">
+	window.onload=function(){
+		var container=document.getElementById("container");
+		var getBgColor = document.getElementById("getBgColor");
+		getBgColor.onclick=function(){
+			console.log(container.style.backgroundColor);
+		}
+	}
+	</script>
+  </head>
+
+  <body>
+    <div class="container" id="container" style="background-color:blue;">
+	  some contents here!
+	</div>
+	<input type = "button" value="getBgColor" id="getBgColor"/>
+  </body>
+</html>

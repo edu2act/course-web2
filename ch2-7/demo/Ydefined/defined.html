@@ -1,0 +1,40 @@
+﻿<!DOCTYPE>  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<title>jQuery自定义插件</title>  
+<script type="text/javascript" src="../jquery-1.8.3.js"></script>  
+<script type="text/javascript" src="jquery.tableUI.js"></script>  
+<script>  
+$(document).ready(function (){  
+    $('#tbl').tableUI();  
+});  
+</script>  
+<style>  
+.evenRow{background-color:#FFCCCC;}  
+.oddRow{background-color:#CCCCCC;}  
+.activeRow{background-color:#FF2233;color:#FFFFFF;curor:pointer;}  
+</style>  
+</head>  
+  
+<body>  
+<table id="tbl" style="width:400px;" border="1px">  
+    <tr>  
+        <td>第一行第一列</td>  
+        <td>第一行第二列</td>  
+    </tr>  
+    <tr>  
+        <td>第二行第一列</td>  
+        <td>第二行第二列</td> 
+    </tr>  
+    <tr>  
+        <td>第三行第一列</td>  
+        <td>第三行第二列</td> 
+    </tr>  
+    <tr>  
+        <td>第四行第一列</td>  
+        <td>第四行第二列</td>
+    </tr>  
+</table>  
+</body>  
+</html>

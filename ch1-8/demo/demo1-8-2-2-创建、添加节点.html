@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8" />
+	<title>使用DOM动态添加文档内容</title>
+	
+</head>
+<body>
+	<p id="demo">单击按钮创建有文本的按钮</p>
+	<button onclick="myFunction()">点我</button>
+	<script type="text/javascript">
+		function myFunction(){
+			var btn = document.createElement("BUTTON");
+			var t = document.createTextNode("CLICK ME");
+			btn.appendChild(t);
+			document.body.appendChild(btn);
+
+			var h=document.createElement("H1");
+			var t=document.createTextNode("Hello World");
+			h.appendChild(t);
+			document.body.appendChild(h);
+		}
+	</script>	
+</body>
+</html>

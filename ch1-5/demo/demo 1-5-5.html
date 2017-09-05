@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>定义电影对象</title>
+<meta charset="utf-8"/>
+<script type="text/javascript">
+var movie1 = {
+	title : "《釜山行》",
+	type : "灾难",
+	rating : 8,
+	showtime : ["8:00", "13:00", "16:00"]
+	getNextShowing:function (){
+	var now="10:00";
+	for(var i=0;i<this.showtime.length;i++
+){
+		if(parseInt(now)<parseInt(this.showtime[i])){
+			alert(this.title+"下一次播放时间是"+this.showtime[i]);
+			break;
+		}
+	}
+}
+}
+movie1.getNextShowing();
+
+var movie2 = {
+	title : "《七月与安生》",
+	type : "爱情",
+	rating : 9,
+	showtime : ["9:00", "14:00", "19:00"]
+	getNextShowing:function (){
+	var now="10:00";
+	for(var i=0;i<this.showtime.length;i++
+){
+		if(parseInt(now)<parseInt(this.showtime[i])){
+			alert(this.title+"下一次播放时间是"+this.showtime[i]);
+			break;
+		}
+	}
+}
+}
+
+getNextShowing(movie1);
+
+</script>
+</head>
+</html>

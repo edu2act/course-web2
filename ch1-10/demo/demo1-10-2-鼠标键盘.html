@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>event对象的属性</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<input type="text" id="username" />
+		<br/>
+		<img src="1.jpg" style="width:200px;" id="image" />
+		<p>在上面文本框中输入信息，会在控制台返回键盘按键的虚拟键盘码，如果按回车键，则会弹出其虚拟键盘码13；在图片上点击，会分别弹出鼠标点击的位置相对浏览器的坐标和相对屏幕的坐标。</p>
+	</body>
+	<script type="text/javascript">
+		window.onload = function(e) {
+			console.log(e);
+		}
+		document.getElementById("username").onkeypress = function(e) {
+			console.log(e.keyCode);
+	//		document.write(e.keyCode);
+			/* Enter的虚拟键盘码是13*/
+			if (e.keyCode == 13) {
+				alert("提交表单");
+			}
+		}
+		document.onclick = function(e) {
+			alert(e.clientX + " " + e.clientY);
+			alert(e.screenX + " " + e.screenY);
+		}
+	</script>
+</html>

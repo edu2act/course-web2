@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery中的ready事件</title>
+	<script src="jquery-3.2.1.slim.min.js"></script>
+	<script>
+	//当DOM载入就绪可以查询及操纵时绑定一个要执行的函数。
+	//这是第一种写法
+		$(document).ready(function(){
+			//这里开始常见事件处理代码
+			$("#buts").click(function(){
+				alert("jQuery事件处理结果");
+			});
+		});
+		//这是第二种写法
+		$().ready(function(){
+			$("#buts").click(function(){
+				alert("第二种写法，省略了document");
+			});
+		});
+		//这是第三种写法
+		$(function(){
+			$("#buts").click(function(){
+				alert("这种是最简单的写法，把function写到$()中");
+			});
+		});
+	</script>
+</head>
+<body>
+<button id="buts" style="height: 200px;width: 200px;font-size: 50PX;">点击</button>
+</body>
+</html>

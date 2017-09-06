@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>1-6-2</title>
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+		<form>
+			<input type = "text" name = "timer" id="timer11" size = "21" value = "0"/>
+			<br/>
+			<input type="button" name="button1" id="timer11" value="开始计时" width = "5" onclick="judgeValue();"/>
+			<input type="button" value="停止计时" onclick = "window.clearInterval(intervalId)"/>
+		</form>
+	</body>
+	<script type="text/javascript">
+		var intervalId;
+		var time = window.document.forms[0].timer;
+		//判断计时开始时的初值
+		function judgeValue()
+		{
+			//var time = window.document.forms[0].timer.value;
+			intervalId = window.setInterval(addNumber,1000);
+		}
+		//计数器加1
+		function addNumber()
+		{
+			time.value=parseInt(time.value)+1;
+		}
+	</script>
+</html>

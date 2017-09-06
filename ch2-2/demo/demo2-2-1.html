@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+      <script src="http://code.jquery.com/jquery-latest.js"></script>  
+      <script>
+        $(function(){
+          $("#myDiv").css("border","3px solid red");
+        });
+      </script>
+      <style>
+        div{
+          width: 90px;
+          height: 90px;
+          float:left;
+          padding: 5px;
+          margin: 5px;
+          background-color: #EEEEEE;
+        }
+      </style>
+  </head>
+  <body>
+    <div id="notMe"><p>id="notMe"</p></div>
+    <div id="myDiv">id="myDiv"</div>
+  </body>
+</html>

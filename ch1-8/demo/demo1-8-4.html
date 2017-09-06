@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>修改节点</title>
+	<style type="text/css">
+		.box{width:60%;height: 400px;font-family: "Microsoft YaHei UI";margin:50px auto;}
+		.toper{height:30px;font-size:20px;color:#77b061;text-align:center;letter-spacing:5px;}
+		img{vertical-align:middle;margin-right: 5px;}
+		.tab1{width:auto;background:url('images/line.png') no-repeat center 30px;float:left;padding-bottom:13px;}
+		.tab2{width:auto;float:left;margin-left:20px;padding-left: 20px;border-left: 1px solid #777;color: #777;}
+		.main{height:100px;clear:left;padding-top:20px;font-size: 14px;}
+		.tel{border:1px solid #777;border-radius:3px;}
+		.tel1{background: #fff1f1;border:1px solid #d55353;border-radius:3px;}
+		a{color:#4185c0;text-decoration:none;}
+		a:hover{color:#a00;}
+	</style>
+	<script>
+		window.onload=function(){
+			var tel,reg,note,imgnode,txtnode,pic,i=1;
+			tel=document.getElementById('tel');
+			
+			//onblur事件会在对象失去焦点时发生
+			tel.onblur=function(){
+				tel=document.getElementById('tel');
+				reg = /^1[3|4|5|7|8]\d{9}$/;
+				//^匹配开始，表示以1开头，第二位可能是3/4/5/7/8等的任意一个，\d表示匹配数字0-9，{9}可以输入9个数字，$匹配结尾。
+				//test() 方法检测一个字符串是否匹配某个模式.
+				note=document.getElementById('note');
+				pic=document.getElementById('pic');
+				if(reg.test(tel.value))
+				{ 
+				  	imgnode=document.createElement('img');
+				  	imgnode.id='pic';
+		          	imgnode.src='images/icon2.png';
+		          	note.replaceChild(imgnode,pic);
+		          	//pic.src='images/icon2.png';
+		          	//修改文本节点
+		          	note.childNodes[1].nodeValue='目前手机注册只支持大陆地区手机号，海外用户可使用';
+		          	//修改属性节点
+		          	document.getElementById('tel').class='tel1';
+		    	} 
+		    	else
+		    	{
+		    	    pic.src='images/icon1.png';
+		    	    note.childNodes[1].nodeValue='请输入11位手机号，海外用户可使用';
+		    	}
+			}
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<div class="box">
+			<div class="toper">
+				<div class="tab1">
+					<img src="images/mobile.png">
+					<span>手机帐号</span>
+				</div>
+				<div class="tab2">
+					<img src="images/email.png">邮箱帐号
+				</div>
+			</div>
+			<div class="main">
+				<label for="tel">手机号码</label>
+				<input type="text" id="tel" class="tel">
+				<span id="note">
+					<img id="pic" src="images/icon.png">请输入11位手机号，海外用户可使用
+					<a href="#">邮箱注册</a>
+				</span>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

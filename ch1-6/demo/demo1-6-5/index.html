@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+  	<title> BOM示例</title>
+	<script type = "text/javascript">
+		function showPic(i){	
+			var oImg = document.images[0];
+			var link = document.links[i];
+			console.log(link);
+			oImg.src = link.href;
+		}
+	</script>
+	<style type="text/css">
+		h1{
+			padding-bottom:0px;
+		}
+		ul{
+			margin-bottom:3px;
+		}
+		li{
+			display:inline;
+		}
+		h1{
+			text-indent:3em;
+		}
+		ul{
+			text-indent:3em;
+		}
+	</style>
+</head>
+<body>
+  	<h1>图片链接</h1>
+  	<ul>
+		<li> <a href="images/1.jpg" title="jinyu" onclick = "showPic(0);return false;">金鱼</a> </li>
+		<li> <a href="images/2.jpg" title="caoyuan" onclick = "showPic(1);return false;">草原</a> </li>
+		<li> <a href="images/3.jpg" title="hehua" onclick = "showPic(2);return false;">荷花</a> </li>
+		<li> <a href="images/4.jpg" title="sinlin" onclick = "showPic(3);return false;">森林</a> </li>
+  	</ul>
+	<img id="placeholder" src="images/0.jpg" width="300px" height="200px" alt="图片占位符" />
+</body>
+</html>

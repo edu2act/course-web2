@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript">
+		var i = 0;
+		window.onload = function(){
+			var pic = document.getElementById("pic");
+			pic.onclick = function(){
+				i = (++i)%5;
+				pic.src = "./images/" + i + ".jpg";
+			}
+		}
+	</script>
+</head>
+<body>
+	<img src="./images/0.jpg" id="pic" />
+</body>
+</html>

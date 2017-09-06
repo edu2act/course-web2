@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>节点</title>
+</head>
+<body>
+	<table border="1px solid black">  
+        <tr>  
+            <td id="john" name="myname">John</td>  
+            <td>Doe</td>  
+            <td id="jack">Jack</td>  
+        </tr>  
+    </table>
+</body>
+	<script>
+		//元素节点
+        var d = document.getElementById("john");  
+        alert(d.nodeType);
+        alert(d.nodeName);
+        alert(d.nodeValue);
+
+        //属性节点
+        var f = document.getElementById("john").getAttributeNode("name");
+        alert(f.nodeType); 
+        alert(f.nodeName);
+        alert(f.nodeValue); 
+
+        //文本节点
+        var g = document.getElementsByTagName("td")[0].firstChild;
+		alert(g.nodeType); 
+		alert(g.nodeName); 
+		alert(g.nodeValue);
+    </script>  
+</html>

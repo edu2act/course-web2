@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title> form实例 </title>
+	<style type="text/css">
+		div {
+			float: left;
+		}
+		p#submit {
+			clear: left;
+		}
+	</style>
+	<script>
+		window.onload = function() {
+			//为“用户名”添加验证函数，当失去焦点时调用函数
+			var username = document.getElementById("username");	
+			username.onblur = checkUsername;
+		} 
+
+		//表单验证,检验是否输入用户名
+		function checkUsername() { 
+			var username = document.getElementById("username");
+			//检验该文本框用户是否已经输入
+			if (username.value.length == 0)//username.value==''
+			{		
+				username.parentNode.innerHTML = username.parentNode.innerHTML+"<span style='color:red'>用户名必须输入</span>";
+			}
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<td>用户名：</td>
+				<td><input type="text" id="username" name="username" /><span id="errorTip"></span></td>
+			</tr>
+			<tr>
+				<td>密码：</td>
+				<td><input type="password" id="passwd"</td>
+			</tr>
+			<tr>
+				<td>确认密码：</td>
+				<td><input type="password" id="rePasswd"/></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><input type="reset" id="reset" value="重设" />
+				<input id="submit" type="submit" value="提交" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

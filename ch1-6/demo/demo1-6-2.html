@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>延迟执行</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+		// 第一种写法
+		function alertmes()
+		{
+			var msg = setTimeout("alert('延迟执行3秒钟')",3000);
+			clearTimeout(msg);
+		}
+		// 第二种写法
+		function alertmes()
+		{
+			var timeoutId = setTimeout(function (){
+				alert('延迟执行3秒钟');
+			},3000);
+		}
+
+		/*window.onload=function(){
+			setTimeout(function(){
+				 window.open("https://www.baidu.com","baidu","width=400px,height=500px")
+			},3000);
+		}
+*/
+	</script>
+</head>
+<body>
+	<input type="button" onClick="alertmes()" value="延迟执行" />
+</body>
+</html>

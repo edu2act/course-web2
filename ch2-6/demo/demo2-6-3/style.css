@@ -1,0 +1,20 @@
+body { font:25px/30px Arial, Helvetica, sans-serif; color:#666;}
+form div { margin-top:5px;margin-left: 350px;}
+form{margin-top:50px;}
+.int label { float:left; width:150px; text-align:right;}
+.int input { padding:5px 1px; border:1px solid #ccc;height:16px;}
+.sub { padding-left:100px;padding-top: 20px;}
+input { margin-right:10px; }
+.sub input{font-size: 20px;width: 70px;height: 40px;}
+.formtips{width: 200px;margin:2px;padding:2px;}
+.onError{
+    background:#FFE0E9 ;
+	
+}
+.onSuccess{
+    background:#E9FBEB ;
+	
+}
+.high{
+    color:red;
+}

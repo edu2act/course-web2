@@ -26,3 +26,9 @@
 | ch1-9| [JavaScript动态修改CSS样式](./ch1-9) | 1.	动态修改CSS样式<br/>2.	自定义鼠标提示<br/> 3.	实现可折叠区域| 
 | ch1-10| [JavaScript动态修改CSS样式](./ch1-10) | 1.	动态修改CSS样式<br/>2.	自定义鼠标提示<br/> 3.	实现可折叠区域| 
 | ch2-1| [jQuery简介](./ch2-1) |1.	JavaScript第三方库简介<br/>2.	流行JavaScript第三方库介绍<br/> 3.	jQuery的特点| 
+| ch2-2| [jQuery选择器](./ch2-2) |1.	jQuery选择器简介<br/>2.	jQuery对象和DOM对象的互相转换<br/> 3.	基本选择器<br/>4.	层次选择器<br/>5.	过滤选择器<br/>6.	表单选择器| 
+| ch2-3| [jQuery事件及事件处理](./ch2-3) |1.	jQuery中的事件类型<br/>2.	jQuery中的常见事件<br/> 3.	绑定事件处理函数<br/>4.	操作事件对象的属性| 
+| ch2-4| [jQuery中的DOM操作](./ch2-4) |1.	jQuery中DOM操作的分类<br/>2.	进行节点查找<br/> 3.	增加、删除、复制、替换、包裹节点<br/>4.	节点属性操作<br/>5.	节点样式操作<br/>6.	遍历节点| 
+| ch2-5| [jQuery效果](./ch2-5) |1.	show()和hidden()方法<br/>2.	fadeIn()和fadeOut()方法<br/> 3.	slideDown()和slideUp()方法<br/>4.	自定义动画方法<br/>5.	停止动画| 
+| ch2-6| [jQuery常见表单表格应用](./ch2-6) |1.	jQuery表单常见应用<br/>2.	jQuery表格常见应用<br/> 3.	jQuery其他常见应用：网页字体大小自定义、网页选项卡、网页换肤| 
+| ch2-7| [jQuery插件](./ch2-7) |1.插件介绍<br/>2.	jQuery表单验证插件—Validation<br/> 3.	jQueryUI| 

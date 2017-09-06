@@ -9,7 +9,7 @@
 - [教学大纲](./materials/outline.pdf)
 - [进度计划](./materials/schedule.pdf)
 - [课程作业](./materials/task.md)
-- [备课记录](./preparelog)
+- [备课记录](./perparelog)
 
 ## 课程内容
 

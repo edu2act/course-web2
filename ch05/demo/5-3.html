@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>修改和删除对象的属性</title>
+</head>
+
+<body>
+<script>
+    //定义对象
+    var dog = {
+        name: "Lili",
+        breed: "Husky",
+        weight: 60,
+        loves: ['eat', 'sleep'],
+
+        jump: function() {
+            alert("She is jumping");
+        },
+        singing: function() {
+            console.log("She is singsing");
+        }
+    };
+
+//1.修改属性的值
+    dog.weight = 70;
+    console.log(dog.age);
+
+//2.删除属性
+    delete dog.weight;
+    console.log(dog.weight);
+
+//3.删除方法
+    delete dog.singing;
+    console.log(dog.singing);
+</script>
+</body>
+
+</html>

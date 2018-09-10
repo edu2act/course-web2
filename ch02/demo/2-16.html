@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>break 和 continue</title>
+</head>
+
+<body>
+    <script>
+    //break 语句用于跳出循环。continue 用于跳过循环中的一个迭代。
+    //判断是否是5的倍数
+    for (var i = 2; i < 12; i++) {
+        if (i % 5 == 0) {
+            continue; //结束本次循环
+            //break;//结束循环体
+        }
+        document.write(i + "<br/>");
+    }
+    //  只输出 0 ，1 ，2 ，到3就跳出循环了
+    for (i = 0; i < 5; i++) {
+        if (i == 3) break;
+        console.log(i);
+
+
+        //  不输出3，因为continue跳过了，直接进入下一个迭代
+        for (i = 0; i <= 5; i++) {
+            if (i == 3) continue;
+            console.log(i);
+        }
+    </script>
+</body>
+
+</html>

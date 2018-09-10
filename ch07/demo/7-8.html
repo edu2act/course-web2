@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>通过子节点获得父节点</title>
+    <link rel="stylesheet" type="text/css" href="css/7-8.css">
+</head>
+
+<body>
+    <h1>新闻动态<span id="time">2018-10-7</span></h1>
+
+    <script>
+    //第一步  获取子节点
+    var span = document.getElementById('time');
+
+    //第二步 获取父节点
+    //var h1 = span.parentNode;
+    var h1 = span.parentElement;
+
+    //获取父节点的内容
+    var text = h1.innerHTML;
+    console.log(text);
+    </script>
+</body>
+
+</html>

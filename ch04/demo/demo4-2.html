@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<script>
+		//数组操作
+		var array = [1, 2, 3, 4, 5];
+		alert(array.length);
+		//数组长度可修改
+		array.length = 3;
+		alert(array);
+		//向数组末尾增加一个元素
+		array.push(3.1415926);
+		alert(array);
+		//删除并返回数组最后一个元素
+		var data = array.pop();
+		alert(data);
+		//删除并返回数组第一个元素
+		var first = array.shift();
+		alert(first);
+		//连接数组为一个字符串
+		var str =  array.join("|");
+		alert(typeof str);
+		alert(str);
+	</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Date对象</title>
+</head>
+<body>
+
+<script>
+//创建Date对象
+    var now = new Date();
+    console.log(now);
+
+//获取完整日期
+    var nowTime = now.toLocaleString();
+    console.log(nowTime);
+
+//获取年份、月份、日期
+    var year = now.getFullYear();//返回年份
+    var month = now.getMonth();//返回月份（0-11）
+    var date = now.getDate();//返回一个月的某一天（1-31)
+    var day = now.getDay();//返回一周中的某一天（0-6）
+    console.log(year);
+    console.log(month);
+    console.log(date);
+    console.log(day);
+
+//获取小时、分钟、秒钟
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+    console.log(hours);
+    console.log(minutes);
+    console.log(seconds);
+
+//输出自定义时间类型
+    var timeStr = year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds;
+    document.write(timeStr);
+</script>
+</body>
+</html>

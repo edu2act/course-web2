@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>nodeType属性</title>
+    <link rel="stylesheet" type="text/css" href="css/8-1.css">
+</head>
+
+<body>
+    <div>
+        <h1>我是标题</h1>
+        <a href="http://www.baidu.com" id="link">我是超链接</a>
+    </div>
+    <script>
+    	//nodeType 是只读的,通过获取数值判断节点类型
+
+
+
+    //获取元素节点
+    var link = document.getElementById('link');
+    console.log(link.nodeType);
+
+    //获取属性节点
+    var attr = link.getAttributeNode("href");
+    console.log(attr.nodeType);
+
+    //获取文本节点
+    var text = link.firstChild;
+    console.log(text.nodeType);
+
+    </script>
+</body>
+
+</html>

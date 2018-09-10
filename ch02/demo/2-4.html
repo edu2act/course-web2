@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>isNaN()函数</title>
+</head>
+
+<body>
+<script>
+ //判断NaN的类型
+    console.log(typeof NaN);
+
+ //与自身不相等
+    console.log(NaN == NaN); //false
+
+ //123是字符串  转换成数字依然为 123  是数字  所以为false
+    var str = "123";
+    console.log(isNaN(str));
+
+ //123abc是字符串  不能成功转换为数字  所以为true
+    var stt = "123abc"
+    console.log(isNaN(stt));
+</script>
+</body>
+
+</html>

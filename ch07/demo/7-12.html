@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>获得前后兄弟节点</title>
+    <link rel="stylesheet" href="css/7-2.css">
+    <style>
+    .red {
+        color: red;
+        font-size: 50px;
+    }
+
+    .green {
+        color: green;
+        font-weight: bolder;
+    }
+    </style>
+</head>
+
+<body>
+    <p>我喜欢的水果:</p>
+    <ul id="fruit">
+        <li>百香果</li>
+        <li>山竹</li>
+        <li id="three" class="red green">火龙果</li>
+        <li>猕猴桃</li>
+    </ul>
+    <button id="btn">动态切换</button>
+    
+    <script>
+    //获取 <li id="three">火龙果</li> 节点
+    var three = document.getElementById('three');
+
+    //删除节点属性
+    three.removeAttribute("class");
+
+
+    //判断某一元素节点是否含有某属性
+    var btn = document.getElementById('btn');
+    btn.setAttribute("onclick", "task()");
+
+    function task() {
+        if (three.hasAttribute("class")) {
+            three.removeAttribute("class");
+        } else {
+            three.setAttribute("class", "red green");
+        }
+    }
+    </script>
+</body>
+
+</html>

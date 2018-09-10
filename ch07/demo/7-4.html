@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>特殊元素节点</title>
+	<link rel="stylesheet" href="css/7-4.css">
+</head>
+<body>
+	<p>学习获取特殊节点:</p>
+    <ul>
+        <li>html 节点 : &nbsp;document.documentElement</li>
+        <li>head 节点 : document.head</li>
+        <li>body 节点 : document.body</li>
+    </ul>
+
+    <script>
+    	//html节点
+    	var html1=document.getElementsByTagName('html');
+
+    	var html2=document.documentElement;
+    	console.log(html1);
+    	console.log(html2);
+    	//html2.style.color="blue";
+
+    	//head节点
+    	var head1=document.getElementsByTagName('head');
+    	
+    	var head2=document.head;
+    	console.log(head1);
+    	console.log(head2);
+
+    	//body节点
+    	var body1=document.getElementsByTagName('body');
+    	
+    	var body2=document.body;
+    	console.log(body1);
+    	console.log(body2);
+    	
+
+    </script>
+</body>
+</html>

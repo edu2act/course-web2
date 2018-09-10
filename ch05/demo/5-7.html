@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>增加获得下次播放时间的函数</title>
+</head>
+
+<body>
+    <script>
+    var movie1 = {
+        title: "007",
+        type: "谍战",
+        rating: 8,
+        showtime: ["8:00", "13:00", "16:00"],
+
+        getNextShowing: function() {
+            var now = "10:00";
+            for (var i = 0; i < this.showtime.length; i++) {
+                if (parseInt(now) < parseInt(this.showtime[i])) {
+                    console.log(this.title + "下一次播放时间是" + this.showtime[i]);
+                    break;
+                }
+            }
+        }
+    };
+
+    var movie2 = {
+        title: "指环王",
+        type: "战争",
+        rating: 9,
+        showtime: ["9:00", "14:00", "19:00"],
+
+        getNextShowing: function() {
+            var now = "10:00";
+            for (var i = 0; i < this.showtime.length; i++) {
+                if (parseInt(now) < parseInt(this.showtime[i])) {
+                    console.log(this.title + "下一次播放时间是" + this.showtime[i]);
+                    break;
+                }
+            }
+        }
+    };
+    </script>
+</body>
+
+</html>

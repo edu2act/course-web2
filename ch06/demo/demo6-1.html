@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  	<title>1-6-1</title>
+  	<meta charset="utf-8">
+	<script type="text/javascript">
+		//alert()
+		function alertDialog(){
+			alert('你确定要关闭此窗口吗');
+		}
+		//confirm
+		function confirmDialog(){
+			var bConfirm = window.confirm('你确定要关闭此窗口吗');
+			if(bConfirm){
+				console.log(true)
+			}else{
+				console.log(false)
+			}
+		}
+
+		//prompt()
+		function promptDialog(){
+			var sPrompt = window.prompt('请输入你的评价,1(满意) 2(一般) 3(不满意)', "鼓励一下我吧");
+			console.log(sPrompt)
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="button" value="alert" onclick="alertDialog();" /><br />
+		<input type="button" value="confirm" onclick="confirmDialog();" /><br />
+		<input type="button" value="prompt" onclick="promptDialog();" /><br />
+	</form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>获得前后兄弟节点</title>
+    <link rel="stylesheet" href="css/7-2.css">
+    <style>
+    .red {
+        color: red;
+        font-size: 50px;
+    }
+
+    .green {
+        color: green;
+        font-weight: bolder;
+    }
+    </style>
+</head>
+
+<body>
+    <p>我喜欢的水果:</p>
+    <ul id="fruit">
+        <li>百香果</li>
+        <li>山竹</li>
+        <li id="three">火龙果</li>
+        <li>猕猴桃</li>
+    </ul>
+    <script>
+    //获取 <li id="three">火龙果</li> 节点
+    var three = document.getElementById('three');
+
+    //获取节点属性
+    var id = three.getAttribute("id");
+    var className = three.getAttribute("class");
+    console.log(id);
+    console.log(className);
+
+    //设置节点属性 当属性不存在时，添加相应属性
+    //three.setAttribute("class", "red");
+
+    //当属性存在时，为修改相应属性值
+   // three.setAttribute("class", "green");
+    //three.setAttribute("class", "red green");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>替换节点</title>
+    <link rel="stylesheet" type="text/css" href="css/8-11.css">
+    <style>
+        body {padding: 150px;}
+        li {list-style: none;}
+    </style>
+</head>
+
+<body>
+    <ul id="ls">
+        <li>苹果</li>
+        <li>香蕉</li>
+        <li>西瓜</li>
+    </ul>
+    <script>
+
+    //第一步：创建新的节点
+    var txtnode = document.createTextNode("菠萝");
+
+    //第二步：找到旧的节点——获取需要修改的节点及其父节点
+    var item = document.getElementById("ls").children[0]; //<li>苹果</li>
+    var oldtxtnode = item.childNodes[0]; //苹果
+
+    //第三步：站在父节点的角度，使用replaceChild(新,旧)函数来替换
+    item.replaceChild(txtnode, oldtxtnode);
+    </script>
+</body>
+
+</html>

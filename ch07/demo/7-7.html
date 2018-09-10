@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>通过父节点获得最后一个子节点</title>
+    <link rel="stylesheet" href="css/7-2.css">
+</head>
+
+<body>
+    <p>我喜欢的水果:</p>
+    <ul id="fruit">
+        <li>百香果</li>
+        <li>山竹</li>
+        <li>火龙果</li>
+        <li>猕猴桃</li>
+    </ul>
+
+    <script>
+
+    var fruit = document.getElementById('fruit');
+
+    //DOM树  包含文本节点
+    var text1 = fruit.lastChild;
+    console.log(text1);
+   
+
+
+    //元素树 不包含文本节点，只包含元素节点
+    var li = fruit.lastElementChild;
+    console.log(li);
+    
+
+    //链式用法获取 "猕猴桃"
+    var text = fruit.lastElementChild.lastChild;
+    console.log(text);
+    </script>
+</body>
+
+</html>

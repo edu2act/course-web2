@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 150px;
+}
+
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding-left: 40px;
+    line-height: 3em;
+    font-size:1.5em;
+    background: url(../images/1.png) no-repeat left center;
+}
+
+#ls li:nth-of-type(2) {
+    background-image: url(../images/2.png);
+}
+
+#ls li:nth-of-type(3) {
+    background-image: url(../images/3.png);
+}
+

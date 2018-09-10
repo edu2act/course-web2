@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>通过父节点获得首个子节点</title>
+    <link rel="stylesheet" href="css/7-2.css">
+</head>
+
+<body>
+    <p>我喜欢的水果:</p>
+    <ul id="fruit">
+        <li>百香果</li>
+        <li>山竹</li>
+        <li>火龙果</li>
+        <li>猕猴桃</li>
+    </ul>
+
+    <script>
+    //DOM树  包含文本节点
+    var text1 = document.getElementById("fruit").childNodes[0];
+    var text2 = document.getElementById("fruit").firstChild;
+    console.log(text1);
+    console.log(text2);
+
+
+    //元素树 不包含文本节点，只包含元素节点
+    var text3 = document.getElementById("fruit").children[0];
+    var text4 = document.getElementById("fruit").firstElementChild;
+    console.log(text3);
+    console.log(text4);
+
+    //链式用法获取 “百香果”
+    var fruit1 = document.getElementById("fruit").children[0].childNodes[0];
+    var fruit2 = document.getElementById("fruit").firstElementChild.firstChild;
+    console.log(fruit1);
+    console.log(fruit2);
+    
+    </script>
+</body>
+
+</html>

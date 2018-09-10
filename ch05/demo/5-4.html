@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>遍历对象的属性</title>
+</head>
+
+<body>
+    <script>
+//定义对象
+    var dog = {
+        name: "Lili",
+        breed: "Husky",
+        weight: 60,
+        loves: ['eat', 'sleep'],
+
+        jump: function() {
+            alert("She is jumping");
+        }
+    };
+
+//遍历对象
+    for (var i in dog) {
+        console.log(i);//访问每一个属性名
+
+        console.log(dog[i]);//访问每一个属性值
+    
+        if (i == "loves") {//寻找爱好数组，并访问数组的每一个元素
+            var len = dog[i].length;
+            for (var j = 0; j < len; j++) {
+                console.log(dog[i][j]);
+            }
+        }
+    }
+    </script>
+</body>
+
+</html>

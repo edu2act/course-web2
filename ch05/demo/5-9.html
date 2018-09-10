@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>构造函数 创建movie对象</title>
+</head>
+
+<body>
+    <script>
+
+    function Movie(title, type, rating, showtime) {
+        this.title = title;  //加工
+        this.type = type;
+        this.rating = rating;
+        this.showtime = showtime;
+        this.getNextShowing = function() { 
+            var now = "10:00";
+            for (var i = 0; i < this.showtime.length; i++) {
+                if (parseInt(now) < parseInt(this.showtime[i])) {
+                    console.log(this.title + "下一次播放时间是" + this.showtime[i]);
+                    break;
+                }
+            }  };
+    }
+
+    var movie1 = new Movie("007", "谍战", 8, ["8:00", "13:00", "16:00"]);
+    var movie2 = new Movie("指环王", "战争", 9, ["9:00", "14:00", "19:00"]);
+
+    </script>
+</body>
+
+</html>

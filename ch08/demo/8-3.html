@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>nodeName属性</title>
+    <link rel="stylesheet" type="text/css" href="css/8-1.css">
+</head>
+
+<body>
+    <div>
+        <h1>我是标题</h1>
+        <a href="http://www.baidu.com" id="link">我是超链接</a>
+    </div>
+    <script>
+    // nodeName 是只读的
+
+    //元素节点的 nodeName 与标签名相同,且返回值为大写的字符串
+    var link = document.getElementById('link');
+    console.log(link.nodeName);
+
+    //属性节点的 nodeName 与属性名相同
+    var attr = link.getAttributeNode("href");
+    console.log(attr.nodeName);
+
+    //文本节点的 nodeName 始终是 #text
+    var text = link.firstChild;
+    console.log(text.nodeName);
+    </script>
+</body>
+
+</html>

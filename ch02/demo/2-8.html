@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>转换为布尔值</title>
+</head>
+
+<body>
+    <img src="images/2.jpg" alt="" width="400" style="float:left;padding-top: 100px;" />
+    img src="images/1.jpg" alt="" width="600" />
+    <script>
+    //隐式转换
+    //加一个！代表获取变量的相反布尔值，
+    //加两个 !! 代表获取变量本身的布尔值
+
+    console.log(!!0); //false
+    console.log(!!-0); //false
+    console.log(!!0.0); //false
+    console.log(!!NaN); //false
+    console.log(!!123); //true
+    console.log(!!undefined); //false
+    console.log(!!null); //false
+    console.log(!!""); //false
+    console.log(!!" "); //true
+    console.log(!!"hello world");
+    //强制转换
+    console.log(Boolean("123"));
+    console.log(Boolean(""));
+    console.log(Boolean(" "));
+    console.log(Boolean(123));
+    console.log(Boolean(null));
+    console.log(Boolean(undefined));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>动态创建表格</title>
+    <style>
+        body {padding: 150px;}
+        td {width: 110px;}
+    </style>
+</head>
+
+<body>
+    <script>
+    //动态创建表格，表格包括1行5列，第一列单元格含有按钮
+
+    /* //第一步创建表格table
+     var table = document.createElement("table");
+     //添加表格属性
+     table.setAttribute("cellSpacing","0");
+     table.setAttribute("border","1");
+     //添加节点
+     document.body.appendChild(table);
+
+     //添加行tr
+     var tr = document.createElement("tr");
+     table.appendChild(tr);
+
+     //添加单元格
+     var td1 = document.createElement("td");
+     var button = document.createElement("button");
+     button.innerHTML="点击我删除本行";
+     td1.appendChild(button);
+     tr.appendChild(td1);
+
+     var td2 = document.createElement("td");
+     tr.appendChild(td2);
+
+     var td3 = document.createElement("td");
+     tr.appendChild(td3);
+
+     var td4 = document.createElement("td");
+     tr.appendChild(td4);
+
+     var td5 = document.createElement("td");
+     tr.appendChild(td5);*/
+
+
+
+    //创建7行5列
+    /*var table = document.createElement("table");
+    table.setAttribute("cellSpacing", "0");
+    table.setAttribute("border", "1");
+    document.body.appendChild(table);
+
+    for (var x = 0; x < 7; x++) {
+        var tr = document.createElement("tr");
+        table.appendChild(tr);
+        for (var y = 0; y < 5; y++) {
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            if (y == 0) {
+                var button = document.createElement("button");
+                button.innerHTML = "点击我删除行 "+x;
+                td.appendChild(button);
+            }
+        }
+    }*/
+    </script>
+</body>
+
+</html>

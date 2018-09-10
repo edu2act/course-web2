@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>直接获取元素节点</title>
+    <link rel="stylesheet" href="css/7-2.css">
+</head>
+
+<body>
+    <p>我喜欢的水果:</p>
+    <ul id="fruit">
+        <li>百香果</li>
+        <li>山竹</li>
+        <li class="three">火龙果</li>
+        <li>猕猴桃</li>
+    </ul>
+    <p>我喜欢的动物:</p>
+    <ul id="animal">
+        <li>小猴子</li>
+        <li>狮子</li>
+        <li class="three">小猪</li>
+        <li>大熊猫</li>
+    </ul>
+    
+    <script>
+    	//通过 id 属性获得节点 对应于ID选择器选中的元素
+    	var fruit=document.getElementById('fruit');
+    	console.log(fruit);
+    	//fruit.style.color="red";
+
+
+       //通过 元素标签 获得节点 对应于标签选择器选中的元素
+    	var p=document.getElementsByTagName('p');
+    	console.log(p);
+
+    	//通过 class 属性获得节点 对应于class选择器选中的元素
+    	var three=document.getElementsByClassName('three');
+    	console.log(three)
+
+    </script>
+</body>
+
+</html>

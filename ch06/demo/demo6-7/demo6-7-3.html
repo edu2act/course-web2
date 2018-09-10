@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>location.search</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul,li{
+			list-style: none;
+		}
+		
+	</style>
+	
+</head>
+<body>
+	
+</body>
+<script>
+	var oGetVars = new (function (sSearch) {
+		if (sSearch.length > 1) {
+		    for (var aItKey, nKeyId = 0, aCouples = sSearch.substr(1).split("&"); nKeyId < aCouples.length; nKeyId++) {
+		      	aItKey = aCouples[nKeyId].split("=");
+		      	this[aItKey[0]] = aItKey.length > 1 ? aItKey[1] : "";
+		    }
+		}
+	})(window.location.search);
+	console.log(oGetVars);
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>获得前后兄弟节点</title>
+    <link rel="stylesheet" href="css/7-2.css">
+    <style>#two{color:red;font-weight:bold;}</style>
+</head>
+
+<body>
+    <p>我喜欢的水果:</p>
+    <ul id="fruit">
+        <li>百香果</li>
+        <li id="two">山竹</li>
+        <li>火龙果</li>
+        <li>猕猴桃</li>
+    </ul>
+    <script>
+    var two = document.getElementById('two');
+
+    //DOM树   指定节点紧跟的前一个兄弟节点 包含文本节点
+    var text1 = two.previousSibling;
+    console.log(text1);
+    //元素树   指定节点紧跟的前一个元素兄弟节点
+    var li1 = two.previousElementSibling;
+    console.log(li1);
+
+
+    //DOM树   指定节点紧跟的后一个兄弟节点 包含文本节点
+    var text2 = two.nextSibling;
+    console.log(text2);
+    //元素树   指定节点紧跟的后一个元素兄弟节点
+    var li2 = two.nextElementSibling;
+    console.log(li2);
+
+
+    //通过two节点获取 “猕猴桃”
+    var text=two.nextElementSibling.nextElementSibling.firstChild;
+    console.log(text);
+    </script>
+</body>
+
+</html>

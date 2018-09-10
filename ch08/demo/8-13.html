@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>使用DOM动态添加文档内容</title>
+    <style>
+        body{padding:150px;}
+        #imgArear {
+            margin-top:10px;
+            width: 910px;
+            height: 400px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <input type="button" value="添加图片" onclick="addImg();"/>
+</form>
+<div id="imgArear"></div>
+<script>
+
+    function addImg() {
+        //1. 生成1个图片节点
+        //var img = document.createElement("img");
+        var img = new Image();
+
+        //2. 为该图片节点设置必要属性（图片路径、图片宽度和高度)
+        img.src = "images/dog.jpg";
+        img.width = 300;
+        img.height = 300;
+        
+        //3. 插入该图片为id="imgArear"的div节点的孩子
+        var div = document.getElementById("imgArear");
+        div.appendChild(img);
+    }
+   
+</script>
+</body>
+</html>

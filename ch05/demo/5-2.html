@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>访问和修改对象的属性</title>
+</head>
+<body>
+<script>
+//定义对象
+    var dog = {
+        name: "Lili",
+        breed: "Husky",
+        weight: 60,
+
+        jump: function () {
+            alert("She is jumping");
+        }
+    };
+
+//1.访问对象属性的书写方式
+    //alert(dog.name);
+    //alert(dog['breed']);
+    //alert(dog["weight"]);
+
+//2.当属性键的命名不合法时,只能用方括号且必须加引号访问
+   /* var obj = {
+        "2016": 14,
+        "first-name": "Husky",
+        "": 60 ,
+        " ":200,
+        "$key":123
+    };
+    console.log(obj["2016"]);
+    console.log(obj[""]);
+    console.log(obj[" "]);*/
+
+//3.当使用一个变量储存对象的一个 key ，必须使用方括号访问，且不能加引号
+   /* var obj = {
+        "2016": 14,
+        "key":123
+    };
+    var key = 2014 + 1 + 1 ;
+    console.log(obj[key]);  //等价于obj["2016"]
+    console.log(obj["key"]);
+    console.log(obj.key);*/
+
+
+//4.使用对象方法 加圆括号调用对象方法（函数）
+    //dog.jump();
+
+//5.添加对象属性
+    /*var dog = {
+        name: "Lili",
+        breed: "Husky",
+        weight: 60,
+       
+        jump: function () {
+            alert("She is jumping");
+        }
+    };
+    dog.loves= ['eat', 'sleep'];
+    console.log(dog.loves);
+    dog.age = 4;
+    console.log(dog.age);*/
+    
+//6.添加对象方法
+    /*dog.singing=function(){
+        console.log("She is singsing");
+    };
+    dog.singing();*/
+    
+
+</script>
+</body>
+</html>

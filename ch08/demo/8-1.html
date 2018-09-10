@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取DOM节点</title>
+	<link rel="stylesheet" type="text/css" href="css/8-1.css">
+</head>
+<body>
+	<div>
+		<h1>我是标题</h1>
+		<a href="http://www.baidu.com" id="link">我是超链接</a>
+	</div>
+	<script>
+		//获取元素节点
+		var link=document.getElementById('link');
+
+		//获取属性节点
+		var attr=link.getAttributeNode("href");
+
+		//获取文本节点
+		var text=link.firstChild;
+		console.log(typeof text);//object
+
+		//获取元素内容
+		var content=link.innerHTML;
+		console.log(typeof content);//string
+		         
+
+	</script>
+</body>
+</html>

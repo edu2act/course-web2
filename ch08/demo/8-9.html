@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>删除元素节点</title>
+    <link rel="stylesheet" type="text/css" href="css/8-5.css">
+</head>
+
+<body>
+    <div>
+        <h1>请选择</h1>
+        <p>我喜欢的水果:</p>
+        <ul id="fruit">
+            <li>百香果</li>
+            <li>山竹</li>
+            <li id="three">火龙果</li>
+            <li>猕猴桃</li>
+        </ul>
+    </div>
+    <script>
+    var fruit = document.getElementById('fruit');
+    var three = document.getElementById('three');
+
+    //通过父节点删除本 three 节点,父节点直接获取
+    fruit.removeChild(three);
+
+    //通过自己删除本 three 节点，父节点间接获取
+    three.parentNode.removeChild(three);
+    </script>
+</body>
+
+</html>

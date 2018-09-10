@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>练习</title>
+</head>
+
+<body>
+    <script>
+//使用for循环，向文档中动态写入一个4行4列的表格，表格单元格内容为&nbsp;
+    document.write('<table border="1" cellspacing="0">');
+    for (var i = 0; i < 4; i++) {
+        document.write("<tr>");
+        for (var j = 0; j < 4; j++) {
+            document.write("<td>&nbsp;</td>");
+        }
+        //document.write("</tr>");//可写可不写
+    }
+    // document.write("</table>");//可写可不写
+    </script>
+
+    <script>
+ //使用while循环，向文档中动态写入一个4行4列的表格，表格单元格内容为&nbsp;
+    var x = 0;
+    document.write('<table border="1" cellspacing="0">');
+    while (x < 4) {
+        document.write("<tr>");
+        var y = 0; //注意
+        while (y < 4) {
+            document.write("<td>&nbsp;</td>");
+            y++;
+        }
+        x++;
+    }
+    </script>
+</body>
+
+</html>

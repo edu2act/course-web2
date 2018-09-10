@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Math对象</title>
+</head>
+
+<body>
+<script>
+//对数进行四舍五入
+    var num1 = Math.round(3.14);
+    console.log(num1);
+    var num2 = Math.round(5.6);
+    console.log(num2);
+    var num3 = Math.round(-1.6);
+    console.log(num3);
+
+//向下取整
+    var num4 = Math.floor(9.7);
+    console.log(num4);
+
+//向上取整
+    var num5 = Math.ceil(9.7);
+    console.log(num5);
+
+//生成0 - 1随机数
+    var randomNum = Math.random();
+    console.log(randomNum);
+
+//生成1 - 10的随机数
+    console.log(Math.floor(randomNum * 11));
+
+//取最大值
+    console.log(Math.max(1, 2, 100, 200));
+
+//取最小值
+    console.log(Math.min(300, 100, -100));
+</script>
+</body>
+
+</html>

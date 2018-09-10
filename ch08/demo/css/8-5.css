@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 150px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    color: red;
+}
+
+p {
+    line-height: 3em;
+    font-size: 28px;
+}
+
+li {
+    padding-left: 40px;
+    line-height: 2em;
+    background: url(../images/fruit1.png) no-repeat left center;
+}
+
+#fruit li:nth-of-type(2) {
+    background-image: url(../images/fruit2.png);
+}
+
+#fruit li:nth-of-type(3) {
+    background-image: url(../images/fruit3.png);
+}
+
+#fruit li:nth-of-type(4) {
+    background-image: url(../images/fruit4.png);
+}
+
+#fruit li:nth-of-type(5) {
+    background-image: url(../images/fruit5.png);
+}

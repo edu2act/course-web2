@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>添加元素节点和文本节点</title>
+    <link rel="stylesheet" type="text/css" href="css/8-5.css">
+</head>
+
+<body>
+    <div>
+        <h1>请选择</h1>
+        <p id="p">我喜欢的水果:</p>
+        <ul id="fruit">
+            <li>百香果</li>
+            <li>山竹</li>
+            <li id="three">火龙果</li>
+            <li>猕猴桃</li>
+        </ul>
+    </div>
+    <script>
+    var p = document.getElementById('p');
+    var fruit = document.getElementById('fruit');
+    var three = document.getElementById('three');
+
+    //第一步：创建节点
+
+    //创建一个元素节点
+    var li = document.createElement("li");
+    //创建一个文本节点
+    var text = document.createTextNode("柠檬");
+
+    //第二步：添加元素节点和文本节点
+
+    // fruit.appendChild(li);
+    fruit.insertBefore(li, three);
+    //li.innerHTML="柠檬";
+    li.appendChild(text);
+
+
+
+    //appendChild()  insertBefore()也适用把一个原有的节点添加到其他地方，比如 p
+    //思考p节点现在的位置？
+    //li.appendChild(p);
+    //fruit.insertBefore(p, three);
+    </script>
+</body>
+
+</html>

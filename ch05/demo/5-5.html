@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>this指向对象</title>
+</head>
+<body>
+<script>
+    
+//this是谁？如何使用
+
+//this 一般使用（书写）在函数里面
+    var dog = {
+        name: "Lili",
+        breed: "Husky",
+        weight: 60,
+        loves: ['eat', 'sleep', 'playing'],
+
+//当一个函数被当做对象的方法被调用时，这个函数里面的this指代的是这个对象。
+        jump:function(){
+            console.log(this);
+            console.log("这条狗的名字为"+this.name);
+            console.log("这条狗的品种为"+this.breed);
+            console.log("这条狗的体重为"+this.weight);
+        }
+
+    };
+
+    //调用对象方法
+    dog.jump();
+
+//切记
+//1.函数的上下文是什么，取决于函数怎么调用，而不是函数如何定义。
+//2.函数的上下文是函数调用时表现的性质，不是函数定义的时候表现的性质。
+
+  
+
+
+//任务：添加 hobby 方法，输出 "Lili的爱好有eat + sleep + playing"
+</script>
+</body>
+</html>

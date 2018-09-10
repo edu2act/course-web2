@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>动态创建表格</title>
+    <style>
+        body {padding: 150px;}
+        td {width: 110px;}
+    </style>
+</head>
+
+<body>
+    <script>
+    //创建7行5列
+    var table = document.createElement("table");
+    table.setAttribute("cellSpacing", "0");
+    table.setAttribute("border", "1");
+    document.body.appendChild(table);
+
+    for (var x = 0; x < 7; x++) {
+        var tr = document.createElement("tr");
+        table.appendChild(tr);
+        for (var y = 0; y < 5; y++) {
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            if (y == 0) {
+                var button = document.createElement("button");
+                button.innerHTML = "点击我删除行 "+x;
+                td.appendChild(button);
+                //为按钮添加事件
+                button.setAttribute("onclick", "removeTr(this)");
+                function removeTr(that){
+                    //通过button找到所在的 tr 以及 tr 的父
+                    var tr=that.parentNode.parentNode;
+                    var trParent=tr.parentNode;
+                    trParent.removeChild(tr);
+                }
+            }
+        }
+    }
+    </script>
+</body>
+
+</html>

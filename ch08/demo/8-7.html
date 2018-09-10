@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>练习</title>
+</head>
+
+<body>
+    <ul>
+        <li><a href="">我是列表第一项</a></li>
+        <li><a href="">我是列表第二项</a></li>
+        <li><a href="">我是列表第三项</a></li>
+        <li><a href="">我是列表第五项</a></li>
+    </ul>
+    <script>
+    //给ul 适合的位置添加
+    //<li><a href="">我是列表第四项</a></li>
+
+    //第一步 创建li元素节点
+    var li = document.createElement("li");
+
+    //第二步  创建a元素节点
+    var a = document.createElement("a");
+    a.setAttribute("href", "");
+    a.innerHTML = "我是列表第四项";
+
+    //第三步  添加所创建的 a 元素节点
+    li.appendChild(a);
+
+    //第四步  添加所创建的 li 元素节点
+    ul.insertBefore(li, ul.lastElementChild);
+    </script>
+</body>
+
+</html>

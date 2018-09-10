@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>转换为字符串类型</title>
+</head>
+<body>
+<img src="images/7.jpg" alt="" width="250" style="float:left;padding-top: 45px;padding-left:30px;"/>
+<img src="images/5.jpg" alt="" width="450"/>
+<script>
+    //隐式转换为字符串类型最简单的方法就是  ""+  拼接
+    console.log(""+true);//true
+    console.log(typeof (""+true) );//String
+    console.log(""+false);//false
+    console.log(typeof (""+false) );//String
+    console.log(""+ 123);//123
+    console.log(typeof (""+ 123) );//String
+    console.log(""+NaN);//NaN
+    console.log(typeof (""+ NaN) );//String
+    console.log(""+undefined);//undefined
+    console.log(typeof (""+undefined) );//String
+    console.log(""+null);//null
+    console.log(typeof (""+null) );//String
+    //强制转换
+    var str = 123;//true false  null undefined
+    console.log(String(str));
+</script>
+</body>
+</html>

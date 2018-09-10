@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+	<table id="table">
+		<caption>table title and/or explanatory text</caption>
+		<thead>
+			<tr id="tr">
+				<th>header</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td id="td">data</td>
+			</tr>
+		</tbody>
+	</table>
+    <ul id="ul" class="red">
+        <li>1</li>
+        <li>1</li>
+        <li id="li">
+            <!-- q -->
+        </li>
+        <li>1</li>
+    </ul>
+    <a href="mailto:joe@example.com?subject=feedback" "email me" id="a">email me</a>
+<img src="images/animal1.png" alt="" id="img">
+    <p id="para"><!-- 注释我是段落 --></p>
+    <script>
+    	var p = document.getElementById("para");
+    	var table = document.getElementById("table");
+    	var tr = document.getElementById("tr");
+    	var td = document.getElementById("td");
+    	var img = document.getElementById("img");
+    	var a = document.getElementById("a");
+    	var text = p.attributes;
+    </script>
+
+</body>
+
+</html>

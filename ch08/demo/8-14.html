@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>动态创建表格</title>
+    <style>
+        body {padding: 150px;}
+        td {width: 110px;}
+    </style>
+</head>
+
+<body>
+    <script>
+   
+
+    //创建7行5列
+    var table = document.createElement("table");
+    table.cellSpacing=0;
+    table.border=1;
+    document.body.appendChild(table);
+
+    for (var x = 0; x < 7; x++) {
+        var tr = table.insertRow();  //table.appendChild(tr);
+
+        for (var y = 0; y < 5; y++) {
+            var td = tr.insertCell();  //tr.appendChild(td);
+            
+            if (y == 0) {
+                var button = document.createElement("button");
+                td.appendChild(button);
+                button.innerHTML = "点击我删除行 "+x;
+                button.onclick=function(){
+                     var tr=this.parentNode.parentNode;
+                     var trParent=tr.parentNode;
+                     trParent.removeChild(tr);
+                }              
+            }
+        }
+    }
+    </script>
+</body>
+
+</html>

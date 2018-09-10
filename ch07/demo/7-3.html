@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>类似数组</title>
+    <link rel="stylesheet" href="css/7-2.css">
+</head>
+
+<body>
+    <p>我喜欢的水果:</p>
+    <ul id="fruit">
+        <li>百香果</li>
+        <li>山竹</li>
+        <li class="three">火龙果</li>
+        <li>猕猴桃</li>
+    </ul>
+    <p>我喜欢的动物:</p>
+    <ul id="animal">
+        <li>小猴子</li>
+        <li>狮子</li>
+        <li class="three">小猪</li>
+        <li>大熊猫</li>
+    </ul>
+    <script>
+    //类似数组对象 具有长度属性，可以遍历，但不是真正的数组，不具有数组的方法
+    // https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Typed_arrays
+
+
+    //类似数组对象遍历
+    var p = document.getElementsByTagName("p");//返回类似数组对象
+    for (var i = 0; i < p.length; i++) {
+        document.write(p[i].innerHTML);
+        document.write("<br/>");
+    }
+    </script>
+</body>
+
+</html>

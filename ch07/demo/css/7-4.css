@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body {
+    padding: 150px;
+}
+
+p {
+    line-height: 3em;
+    font-size: 40px;
+    color: red;
+}
+
+li {
+    padding-left: 48px;
+    line-height: 2em;
+    font-size: 32px;
+    background: url(../images/xg.png) no-repeat left center;
+}

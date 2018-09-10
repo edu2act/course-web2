@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>数据类型转换规则</title>
+    <style>
+        body{
+            padding: 50px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<script>
+   // + 是拼接 还是 加号 ？？？
+    var a = 3;
+    var b = ".jpg";
+    var c = 5;
+    var d = "189";
+    var  add1 = a + b;
+    var  add2 = a + c;
+    var  add3 = a + b + c;
+    var  add4 = a + c + b;
+    var  add5 = a + d;
+    console.log(add1);
+    console.log(add2);
+    console.log(add3);
+    console.log(add4);
+    console.log(add5);
+
+   //其他算数运算符  -  * /  %
+   var t = "20";
+   var r = 10;
+   var p = true;
+   var q = false;
+   var count1 = t - r;
+   var count2 = t - p;
+   var count3 = t - q;
+   var count4 = r- p;
+   var count5 = r - q;
+   console.log(count1);
+   console.log(count2);
+   console.log(count3);
+   console.log(count4);
+   console.log(count5);
+
+
+    //布尔类型计算
+    var x = true;
+    var y = false;
+    var sum1 = 99 + x;
+    var sum2 = 99 + y;
+    var sum3 = "99" + x;
+    var sum4 = "99" + y;
+    console.log(sum1);
+    console.log(sum2);
+    console.log(sum3);
+    console.log(sum4);
+</script>
+</body>
+</html>

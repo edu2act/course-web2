@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    body {
+        padding: 50px;
+    }
+
+    #div {
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+
+    .circle {
+        width: 100px;
+        height: 100px;
+        margin: 15px;
+        border-radius: 50%;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="div">
+        <div class="circle" style="background:rgba(100,100,200,0.4)"></div>
+    </div>
+    <script>
+    //效果：点击桌面圆，然后添加一个随机颜色的圆
+
+    //第一步：随机颜色函数
+    function color() {
+        var r = parseInt(Math.random() * 255);
+        var g = parseInt(Math.random() * 255);
+        var b = parseInt(Math.random() * 255);
+        var a = Math.random() * 0.7 + 0.3;
+        //a = a.toFixed(2)  //保留两位小数
+        var rgba = "rgba(" + r + "," + g + "," + b + "," + a + ")";
+
+        return rgba;
+    }
+
+    //第二步：添加随机颜色圆函数
+    function circle(that) {
+        that.innerHTML += '<div class="circle" style="background:' + color() + '"></div>';//字符串拼接
+    }
+
+    //第三步：为div绑定函数功能
+    var div = document.getElementById("div");
+    div.setAttribute("onclick", "circle(this)");
+    
+    </script>
+</body>
+
+</html>

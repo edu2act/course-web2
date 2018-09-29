@@ -5,23 +5,56 @@
 	<script>
 		//数组操作
 		var array = [1, 2, 3, 4, 5];
-		alert(array.length);
+		// console.log(array.length);
+
 		//数组长度可修改
-		array.length = 3;
-		alert(array);
-		//向数组末尾增加一个元素
-		array.push(3.1415926);
-		alert(array);
-		//删除并返回数组最后一个元素
-		var data = array.pop();
-		alert(data);
-		//删除并返回数组第一个元素
-		var first = array.shift();
-		alert(first);
+		// array.length = 3;
+		// console.log(array);
+
 		//连接数组为一个字符串
-		var str =  array.join("|");
-		alert(typeof str);
-		alert(str);
+		// var str =  array.join("|");
+		// console.log(typeof str);
+		// console.log(str);
+
+		//向数组末尾增加一个元素,并返回新数组的长度
+		// array.push(3.1415926);
+		// console.log(array);
+
+		//删除并返回数组最后一个元素
+		// var data = array.pop();
+		// console.log(data);
+
+		//删除并返回数组第一个元素
+		// var first = array.shift();
+		// console.log(first);
+
+		//向数组的开头添加一个或更多元素，并返回新的长度
+		// var lg = array.unshift(0);
+		// console.log(array);
+		// console.log(lg);
+
+		//连接两个或更多的数组，并返回结果,该方法不会改变原来的数组，而仅仅会返回被连接数组的一个副本
+		//concat方法中的参数可以是多个，一个数组，也可以是多个数组，也可以是基本类型的值
+		// var newArr = array.concat([6,7,8])
+		// console.log(newArr)
+		
+		//reverse颠倒数组中元素的顺序，该方法会改变原来的数组，而不会创建新的数组
+		// array.reverse();
+		// console.log(array)
+
+		//arrayObject.slice(start,end)返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素。
+		//如果没有指定end参数，那么返回从 start 到数组结束的所有元素组成的数组
+		// var newArr = array.slice(1,3);
+		// console.log(newArr);
+
+		// splice(index,howmany,item1,.....,itemX) 向（从）数组中添加（删除）项目，然后返回被删除的项目。
+		// index必需。整数，规定添加/删除项目的位置,howmany必需。要删除的项目数量。如果设置为 0，则不会删除项目。
+		// item1, ..., itemX可选。向数组添加的新项目
+		// array.splice(1,2);//从第一位开始删，删两个
+		// console.log(array);
+
+		// array.splice(1,2,100);//从第一位开始删，删两个,在第一位添加 100
+		// console.log(array);
 	</script>
 </head>
 

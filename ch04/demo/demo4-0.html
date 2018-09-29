@@ -23,6 +23,16 @@
 	//charAt() – 返回指定位置的字符。
 	document.write('<h1>charAt()</h1>');
 	document.write(str01.charAt(2)  + '</br>');
+
+	//split() – 通过将字符串划分成子串，将一个字符串做成一个字符串数组。
+	document.write('<h1>split()</h1>');
+	var str03 = "aa.bb.cc"
+	document.write(str03.split("."));
+	console.log(str03.split(".")); //使用打印看数组结构
+
+
+	//以下作为扩展
+
 	
 	//replace() – 用来查找匹配指定的字符串，返回使用新字符串代替匹配的字符串后的字符串（只替换第一个）。
 	document.write('<h1>replace()</h1>');
@@ -37,17 +47,9 @@
 	document.write(str01.slice(1)  + '</br>');
 	document.write(str01.slice(1,3)  + '</br>');
 	
-	
-	
-	//split() – 通过将字符串划分成子串，将一个字符串做成一个字符串数组。
-	document.write('<h1>split()</h1>');
-	var str03 = "aa.bb.cc"
-	document.write(str03.split("."));
-	console.log(str03.split(".")); //使用打印看数组结构
-	
 	//toLowerCase() – 将整个字符串转成小写字母。
 	//toUpperCase() – 将整个字符串转成大写字母。 
-	document.write('<h1>toLowerCase()</h1>');
+	document.write('<h1>toLowerCase()/toUpperCase()</h1>');
 	var str04 = 'aaBBcc';
 	document.write(str04.toLowerCase() + '</br>');
 	document.write(str04.toUpperCase() + '</br>');

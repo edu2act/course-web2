@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//根据位置提取一段子串 slice(start,end)
+		//从start开始(包括start)到end结束(不包括end)为止的所有字符
+
+
+		//截取前6位  "012345"
+		var str="0123456789abcdef";
+		var str1=str.slice(0,6);//不包括end,即不包含下标为6的字符 "6"
+		console.log("str1 的值为：%s",str1);//返回新的字符串
+		console.log("str  的值为：%s",str);//原始字符串不更改
+
+		//截取字符串"6789abcdef"
+		//若未指定end参数，则要提取的子串包括 start 到原字符串结尾的字符串
+		var str2=str.slice(6);
+		console.log("str2 的值为：%s",str2);
+
+		//截取后六位"abcdef"
+		//参数为负值时： -1 指字符串的最后一个字符，-2 指倒数第二个字符，以此类推。
+		var str3=str.slice(-5);
+		console.log("str3 的值为：%s",str3);
+		
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>字符串长度</title>
+</head>
+
+<body>
+    <script>
+    //字符串长度属性
+    var str = "abcdefg123";
+    var length = str.length;
+    console.log(length);
+
+    //获得指定位置的字符 chartAt(n) 
+    var str = "0123456789abcdef";
+    console.log(str.charAt(10));
+
+    // Math.random() 生成 0~1 的随机数
+
+    //生成0-100的随机数
+    console.log(Math.random() * 100);
+
+    //生成0 - 100整数的随机数
+    console.log(parseInt(Math.random() * 100));
+
+
+    // 拼接 十六进制表示的随机颜色  比如  红色 #ff0000
+    var color = "#";
+    var str = "0123456789abcdef";
+    for (var i = 0; i < 6; i++) {
+        color += str.charAt( parseInt(Math.random() * str.length) );
+    }
+    // var html = 
+    document.write("<p style='color:" + color + ";'>我的颜色是随机产生的</p>");
+
+
+    //字符串遍历
+    var str = 'hello world';
+    for (var i = 0; i < str.length; i++) {
+        console.log(str[i]);
+    }
+    </script>
+</body>
+
+</html>

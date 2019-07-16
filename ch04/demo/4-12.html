@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>splice()</title>
+</head>
+
+<body>
+    <script>
+    //向/从数组中添加/删除项目
+    //splice(index,howmany,item1,.....,itemX) 方法
+    //index	必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。
+    //howmany	必需。要删除的项目数量。如果设置为 0，则不会删除项目。
+    //item1, ..., itemX	可选。向数组添加的新项目。
+
+
+    //删除数组所有值，不添加任何值
+    var arr = ['hello', 'world', 'old', 'you'];
+    var att = arr.splice(0, arr.length);
+    console.log("att 的值为：%o", att); //返回值为删除的值组成的数组，是一个新的数组
+    console.log("arr 的值为：%o", arr); //返回修改后的数组,即splice方法修改原始数组
+
+    //删除数组最后面的三位，不添加任何值
+    //使用负数可从数组结尾处规定位置
+    var arr = ['hello', 'world', 'old', 'you'];
+    var att = arr.splice(-3, 3);
+    console.log("att 的值为：%o", att); //返回值为删除的值组成的数组，是一个新的数组
+    console.log("arr 的值为：%o", arr);//返回修改后的数组,即splice方法修改原始数组
+
+
+    //不删除任何值，在指定位置添加值
+    var arr = ['hello', 'world', 'old', 'you'];
+    var att = arr.splice(2, 0, "你","好");//第二个参数为0，代表不删除任何值
+    console.log("att 的值为：%o", att); //返回值为删除的值组成的数组，不删除时，返回一个空数组
+    console.log("arr 的值为：%o", arr);//返回修改后的数组,即splice方法修改原始数组
+
+    </script>
+</body>
+
+</html>

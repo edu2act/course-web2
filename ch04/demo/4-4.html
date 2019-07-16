@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>文本缩略</title>
+</head>
+
+<body>
+    <script>
+    //1. 定义一个帖子字符串
+    var msgContent = "第1条帖子这是我的第1条帖子";
+
+    //2. 截取字符串的前5个字符
+    msgContent.length > 5 && (msgContent = msgContent.slice(0,5)+'......');
+    
+    console.log(msgContent);
+    </script>
+</body>
+
+</html>

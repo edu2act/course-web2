@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>创建表格并填充内容</title>
+</head>
+
+<body>
+    <script>
+    //功能：将指定的二维数组内容用表格展示出来
+    function createTable(arr) {
+        var row = arr.length;
+        var column = arr[0].length;
+        console.log(row)
+        console.log(column)
+        document.write('<table border="5px">');
+        for (var i = 0; i < row; i++) {
+            document.write('<tr>');
+            for (var j = 0; j < column; j++) {
+                document.write('<td>' + arr[i][j] + '</td>');
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+
+    }
+
+    var arr = [
+        ['姓名', '年龄', '分数'],
+        ['李四白', 20, 100],
+        ['张三丰', '19', 80],
+        ['王小麻', 18, 89]
+    ]
+    createTable(arr);
+    </script>
+</body>
+
+</html>

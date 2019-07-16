@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>数组元素的添加删除</title>
+</head>
+
+<body>
+    <script>
+    //数组拼接 concat()方法
+    var arr = [1, 2, 3, 4];
+    var att = arr.concat(5, 6);
+    console.log("att 的值为：%o", att); //返回修改后的数组
+    console.log("arr 的值为：%o", arr); //返回原始数组，即concat方法不修改原始数组
+
+    //参数是数组，那么添加的是数组中的元素，而不是数组。
+    var arr = [1, 2, 3, 4];
+    var arr1 = [5, 6, 7, 8];
+    var att = arr.concat(arr1);
+    console.log("att 的值为：%o", att); //返回修改后的数组
+    console.log("arr 的值为：%o", arr); //返回原始数组
+
+
+    //删除数组的最后一个元素 pop() 方法
+    //返回值为删除的数组的最后一个元素
+    //length自动减 1
+    var arr = [1, 2, 3, 4, 5];
+    var att = arr.pop();
+    console.log("att 的值为：%s", att); //返回删除的数组的最后一个元素
+    console.log("arr 的值为：%o", arr); //返回修改后的数组,即pop方法修改原始数组
+    console.log("arr.length 的值为：%d ,原始数组长度发生改变", arr.length);
+
+
+
+    //向数组的末尾添加元素 push() 方法
+    //可添加一个或多个元素
+    //返回值为新的长度
+    var arr = [1, 2, 3, 4, 5];
+    var att = arr.push(6);
+    console.log("att 的值为：%d", att); //返回值为新的长度,即原始数组修改后的长度
+    console.log("arr 的值为：%o", arr); //返回修改后的数组,即pop方法修改原始数组
+
+    //添加多个元素
+    arr.push(7, 8, 9, 10);
+    console.log("arr 的值为：%o", arr);
+
+
+
+    //删除数组的第一个元素 shift() 方法
+    //返回值为删除的数组的第一个元素
+    //length自动减 1
+    var arr = [1, 2, 3, 4, 5];
+    var att = arr.shift();
+    console.log("att 的值为：%s", att); //返回删除的数组的第一个元素
+    console.log("arr 的值为：%o", arr); //返回修改后的数组,即shift方法修改原始数组
+    console.log("arr.length 的值为：%d ,原始数组长度发生改变", arr.length);
+
+
+
+
+    //向数组的开头添加元素 unshift() 方法
+    //可添加一个或多个元素
+    //返回值为新的长度
+    var arr = [1, 2, 3, 4, 5];
+    var att = arr.unshift(9);
+    console.log("att 的值为：%d", att); //返回值为新的长度,即原始数组修改后的长度
+    console.log("arr 的值为：%o", arr); //返回修改后的数组,即pop方法修改原始数组
+
+    //添加多个元素
+    arr.unshift(6, 7, 8);
+    console.log("arr 的值为：%o", arr);
+
+
+
+    //对于 pop push shift unshift我们一般不关心它的返回值，只要知道它们如何修改的原始数组即可
+    //这四个方法只可以操作数组的头和尾，splice()方法可以操作数组的任何位置
+    </script>
+</body>
+
+</html>

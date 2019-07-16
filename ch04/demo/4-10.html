@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    //数组转换为字符串 join()方法
+
+    //指定分隔符为空格
+    var arr = ["How", "are", "you", "?"];
+    var att = arr.join(" ");
+    console.log("att 的值为：%o", att); //原始数组不更改
+    console.log("arr 的值为：%o", arr); //返回拼接后的字符串    
+
+    //指定分隔符为横杠 -
+    var arr = ["How", "are", "you", "?"];
+    var att = arr.join("-");
+    console.log("att 的值为：%o", att);
+
+    //如果省略参数，则使用逗号作为分隔符。
+    var arr = ["How", "are", "you", "?"];
+    var att = arr.join();
+    console.log("att 的值为：%o", att);
+    </script>
+</body>
+
+</html>

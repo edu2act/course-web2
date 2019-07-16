@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>数组访问</title>
+</head>
+
+<body>
+    <script>
+    //数组长度
+    var arr = ["河北", "河南", "广西", "广东", "山东", "山西"];
+    console.log(arr.length);
+
+    // 访问一维数组  下标从 0 开始
+    var arr = ["河北", "河南", "广西", "广东", "山东", "山西"];
+    console.log(arr[2]);
+
+    //为数组添加新值
+    var arr = ["河北", "河南", "广西", "广东", "山东", "山西"];
+    console.log(arr.length);
+    arr[arr.length] = "湖南";
+    console.log(arr.length);
+    arr[arr.length] = "湖北";
+    console.log(arr.length);
+
+
+    //二维数组
+    var arr = [
+        ['哈尔滨', '齐齐哈尔', '大庆'],
+        ['沈阳', '铁岭', '丹东'],
+        ['石家庄', '保定', '廊坊'],
+        ['南宁', '桂林', '柳州']
+    ];
+    //访问  保定
+    console.log(arr[2][1]);
+
+    //二维数组的长度
+    console.log(arr[0].length);
+
+
+    //在c语言中数组的长度是不可变的
+    //在js中数组的长度是可变的
+    //大家还记得js中的字符串的长的是可变的还是不可变的吗？
+    var aColors = ["red", "green", "blue"];
+    alert(aColors.length); // 3
+    aColors[3] = "purple";
+    alert(aColors.length); // 4
+    </script>
+</body>
+
+</html>

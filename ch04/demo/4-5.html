@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>split()</title>
+</head>
+
+<body>
+    <script>
+    //把字符串分割成数组  split(separator,howmany) 
+    //参数1：指定分隔位置；参数2：返回数组的长度（可选）
+    var str = "1-2-3-4-5-6-7";
+    var str1 = str.split("-");
+    console.log("str1 的值为：%o", str1); //返回新的字符串
+    console.log("str  的值为：%s", str); //原始字符串不更改
+
+    //指定返回数组的长度
+    var str2 = str.split("-",4);
+    console.log("str2 的值为：%o", str2); 
+    
+    </script>
+</body>
+
+</html>

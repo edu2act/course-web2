@@ -109,7 +109,12 @@ function parseUrl(url) {
 # 7. **如何获取UA?**
 
 ```js
-`function` `whatBrowser() { ``     ``document.Browser.Name.value=navigator.appName; ``     ``document.Browser.Version.value=navigator.appVersion; ``     ``document.Browser.Code.value=navigator.appCodeName; ``     ``document.Browser.Agent.value=navigator.userAgent; `` ``}`
+function whatBrowser() {
+  document.Browser.Name.value = navigator.appName;
+  document.Browser.Version.value = navigator.appVersion;
+  document.Browser.Code.value = navigator.appCodeName;
+  document.Browser.Agent.value = navigator.userAgent;
+}
 ```
 
 # 8. BOM 和 DOM 的关系
@@ -125,7 +130,12 @@ JS是通过访问BOM（Browser Object Model）对象来访问、控制、修改�
 # 9.**下面代码的输出是什么?**
 
 ```js
-`for` `(``var` `i = 0; i < 3; i++) {`` ``setTimeout(() => console.log(i), 1);``}` `for` `(let i = 0; i < 3; i++) {`` ``setTimeout(() => console.log(i), 1);``}`
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 1);
+}
+for (let i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 1);
+}
 ```
 
 A: 0 1 2 and 0 1 2
@@ -133,3 +143,89 @@ A: 0 1 2 and 0 1 2
 B: 0 1 2 and 3 3 3
 
 C: 3 3 3 and 0 1 2
+
+# 10.在 HTML 页面中，下面关于 Window 对象的说法不正确的是（）。（选择一项）  
+
+ A. Window 对象表示浏览器的窗口，可用于检索有关窗口状态的信息  
+
+ B. Window 对象是浏览器所有内容的主容器  
+
+ C. 浏览器打开 HTML 文档时，通常会创建一个 Window 对象  
+
+ D. 如果文档定义了多个框架，浏览器只为原始文档创建一个 Window 对象，无须 
+
+为每个框架创建 Window 对象
+
+# 11 .哪一个对象可以获得屏幕的大小()  
+
+ A. window  
+
+ B. screen  
+
+ C. navigator  
+
+ D. screenX
+
+
+
+# 12.setInterval("alert('welcome');",1000); 这段代码的意思是()  
+
+ A. 等待 1000 秒后，再弹出一个对话框  
+
+ B. 等待 1 秒钟后弹出一个对话框  
+
+ C. 语句报错,语法有问题  
+
+ D. 每隔一秒钟弹出一个对话框 
+
+# 13. window 对象的 open 方法返回的是()  
+
+ A. 没有返回值  
+
+ B. boolean 类型，表示当前窗口是否打开成功  
+
+ C. 返回打开新窗口的对象  
+
+ D. 返回 int 类型的值，开启窗口的个数 
+
+# 14.在 HTML 页面中，下面有关的 Document 对象的描述错误的是（）。（选择一项）  
+
+ A. Document 对象用于检查和修改 HTML 元素和文档中的文本  
+
+ B. Document 对象用于检索浏览器窗口中的 HTML 文挡的信息  
+
+ C. Document 对象提供客户最近访问的 URL 的列表  
+
+ D. Document 对象的 location 属性包含有关当前 URL 的信息 
+
+# 15.要将页面的状态栏中显示“已经选中该文本框”，下列 JavaScript 语句正确的是（ ） 
+
+A. window.status="已经选中该文本框" 
+
+B. document.status="已经选中该文本框" 
+
+C. window.screen="已经选中该文本框" 
+
+D. document.screen="已经选中该文本框" 
+
+# 16.在 HTML 文档对象模型中，history 对象的（）用于加载历史列表中的下一个 URL 页面。 
+
+ A．next()    B.back()     C.forward()    D.go(-1)
+
+# 17.在 Javascript 中，对于浏览器对象的层次关系理解正确的是（）（选择二项） 
+
+A.window 对象是所有页面内容的根对象 
+
+B.document 对象包含 location 对象和 history 对象 
+
+C.location 对象包含 history 
+
+D.document 对象包含 form 对象
+
+
+
+# 18.JS中如何将页面重定向到另一个页面？
+
+1. 使用 location.href：`window.location.href =“https://www.onlineinterviewquestions.com/”`
+2. 使用 location.replace： `window.location.replace(" https://www.onlineinterviewquestions.com/;");`
+

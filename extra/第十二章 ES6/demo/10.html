@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr1 = [1, 2, 3, 4];
+        var arr2 = [5, 6, 7, 8];
+        //拼接数组arr1,arr2
+        arr1.push(...arr2);
+
+        var arr3 = [1, 5, 8, 2, 0, -2, 20];
+        //求数组的最大值和最小值
+        Math.max(...arr3);
+
+
+        var obj1 = {
+            a: 1,
+            b: 2,
+            c: 3
+        };
+        var obj2 = {
+            ...obj1,
+            d: 4,
+            e: 5,
+            f: 6
+        };
+    </script>
+</body>
+
+</html>

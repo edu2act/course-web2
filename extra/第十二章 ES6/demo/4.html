@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        let arr = [1, 2, 3];
+        
+        //ES5
+        let x = arr[0];
+        let y = arr[1];
+        let z = arr[2];
+
+        //ES6
+        let [x, y, z] = arr;
+        x // 1
+        z // 3
+
+        let url = { username: "小红", password: "123455" };
+        
+        //ES5
+        let username = url.username;
+        let password = url.password;
+        
+        //ES6
+        let { username , password } = url;
+        username // "小红"
+    </script>
+</body>
+</html>

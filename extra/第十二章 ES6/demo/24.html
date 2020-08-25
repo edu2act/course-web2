@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let s = Symbol();
+
+    typeof s; // "symbol"
+
+    let s1 = Symbol('foo');
+    let s2 = Symbol('bar');
+
+    s1; // Symbol(foo)
+    s2; // Symbol(bar)
+
+    //如果 Symbol 的参数是一个对象，就会调用该对象的toString方法，将其转为字符串，然后才生成一个 Symbol 值。
+    let obj1 = {};
+    let obj2 = {
+      toString: function () {
+        return "abc";
+      }
+    };
+    let s3 = Symbol(obj1);
+    let s4 = Symbol(obj2);
+
+    console.log(s3); //Symbol([object Object])
+    console.log(s4); //Symbol(abc)
+  </script>
+</body>
+
+</html>

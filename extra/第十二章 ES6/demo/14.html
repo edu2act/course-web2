@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //模板字符串
+
+    //例1 字符串中存在变量
+    var name = "小白";
+    var age = 20;
+
+    //ES5
+    var html = "我的名字是" + name + ", 我今年" + age + "岁。";
+    //ES6
+    var html = `我的名字是${name}, 我今年${age}岁。`;
+
+
+    //例2 多行字符串
+    var html = "<ul>" +
+      "<li>first</li>" +
+      "<li>second</li>" +
+      "</ul>";
+
+    var html = `
+            <ul>
+              <li>first</li>
+              <li>second</li>
+            </ul>
+        `;
+
+    //例3 插入表达式，比如${a + b}
+    var a = 1;
+    var sum = `最终结果是${a + 2}`
+
+    //例4 支持 ${ ${ } } 这种模版嵌套的方式
+    var flag = 2;
+    var text = `结果：${flag ? `true${1 + 1}` : 'false'}`;
+
+  </script>
+</body>
+
+</html>

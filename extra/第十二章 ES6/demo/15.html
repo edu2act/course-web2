@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+  <title>Document</title>
+  <style>
+    body {
+      padding: 50px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="table-responsive container">
+    <table class="table table-bordered  table-hover" id="table">
+      <tr>
+        <th class="col-md-1">序号</th>
+        <th class="col-md-1">题目</th>
+        <th class="col-md-3">内容</th>
+        <th class="col-md-1">作者</th>
+      </tr>
+    </table>
+  </div>
+  <script src="data.js"></script>
+  <script>
+    var table = document.getElementById('table');
+    jsonData = JSON.parse(data);
+
+
+    for (var i = 0; i < jsonData.length; i++) {
+      var html = `
+            <tr>
+                <td>${i + 1}</td>
+                <td>${jsonData[i].title}</td>
+                <td>${jsonData[i].content.replace(/\|/g, "<br/>")}</td>
+                <td>${jsonData[i].authors}</td>
+            </tr>
+            `;
+      table.innerHTML += html;
+    }
+  </script>
+</body>
+
+</html>

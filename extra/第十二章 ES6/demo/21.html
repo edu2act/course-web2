@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //copyWithin 方法，从数组内部复制值，然后粘贴指定位置；
+    var items = [1, 2, 3, 4, 5];
+    //从参数索引 1 开始复制值 //然后把值从参数索引 2 开始粘贴 //参数索引 3 设置结束粘贴索引值
+    items.copyWithin(2, 0, 4);
+    console.log(items);
+
+    //参数是一个回调函数，可以用箭头函数，findIndex 可以得到索引
+    var items = [10, 20, 30, 40, 50];
+    console.log(items.find((value) => value > 19));
+
+    //ES6 提供了 fill()方法，可以填充重写数组中的元素值；
+    var items = [1, 2, 3, 4, 5];
+    items.fill('a');
+    console.log(items); //['a', 'a', 'a', 'a', 'a']
+
+    var items = [1, 2, 3, 4, 5];
+    items.fill('a', 3, 4); //索引 3 开始，索引 4 结束
+    console.log(items); //[1, 2, 3, 'a', 1]
+
+    //遍历数组
+    for (var index of ['a', 'b'].keys()) {
+      console.log(index);
+    }
+    // 0
+    // 1
+
+    for (var elem of ['a', 'b'].values()) {
+      console.log(elem);
+    }
+    // 'a'
+    // 'b'
+
+    for (var [index, elem] of ['a', 'b'].entries()) {
+      console.log(index, elem);
+    }
+    // 0 "a"
+    // 1 "b"
+
+    //flat()用于将嵌套的数组“拉平”，变成一维的数组。该方法返回一个新数组，对原数据没有影响。
+    [1, 2, [3, [4, 5]]].flat()
+    // [1, 2, 3, [4, 5]]
+
+    [1, 2, [3, [4, 5]]].flat(2)
+    // [1, 2, 3, 4, 5]
+  </script>
+</body>
+
+</html>

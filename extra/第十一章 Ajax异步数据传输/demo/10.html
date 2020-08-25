@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+      var url = 'shuju.json';
+      //get封装
+      function getAjax(url, callback) {
+        var ajax;
+        if (window.XMLHttpRequest) {
+          ajax = new XMLHttpRequest();
+        } else {
+          ajax = new ActiveXObjext('Microsoft.XMLHttp');
+        }
+        ajax.open('get', url, true);
+        ajax.send(null);
+        ajax.onreadystatechange = function () {
+          if (ajax.readyState == 4 && ajax.status == 200) {
+            var data = ajax.responseText;
+            // document.write(data);
+            //其他DOM操作
+            callback && callback(data);
+          }
+        };
+      }
+      // getAjax(url);
+
+      //post封装
+      function postAjax(url, callback) {
+        var ajax;
+        if (window.XMLHttpRequest) {
+          ajax = new XMLHttpRequest();
+        } else {
+          ajax = new ActiveXObjext('Microsoft.XMLHttp');
+        }
+        ajax.open('post', url, true);
+        // ajax.setRequestHeader("Content-Type", "application/-www-form-urlencoded");
+        ajax.send(null);
+        ajax.onreadystatechange = function () {
+          if (ajax.readyState == 4 && ajax.status == 200) {
+            var data = ajax.responseText;
+            //document.write(data);
+            //其他DOM操作
+            callback && callback(data);
+          }
+        };
+      }
+      // postAjax(url);
+
+      function ajax(method, url, callback) {
+        var ajax;
+        if (window.XMLHttpRequest) {
+          ajax = new XMLHttpRequest();
+        } else {
+          ajax = new ActiveXObjext('Microsoft.XMLHttp');
+        }
+        ajax.open(method, url, true);
+        if (method == 'post') {
+          ajax.setRequestHeader('Content-Type', 'application/-www-form-urlencoded');
+        }
+        ajax.send(null);
+        ajax.onreadystatechange = function () {
+          if (ajax.readyState == 4 && ajax.status == 200) {
+            var data = ajax.responseText;
+            document.write(data);
+            //其他DOM操作
+            callback && callback(data);
+          }
+        };
+      }
+      //ajax封装
+      ajax('post', url);
+    </script>
+  </body>
+</html>

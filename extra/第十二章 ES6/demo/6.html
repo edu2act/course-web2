@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let [foo, [[bar], baz]] = [1, [[2], 3]];
+    foo // 1
+    bar // 2
+    baz // 3
+
+    // 用逗号作为占位符不赋值，任何没有在解构模式中明确指定的项都会被忽略
+    let [, , third] = ["foo", "bar", "baz"];
+    third // "baz"
+
+    let [x, , y] = [1, 2, 3];
+    x // 1
+    y // 3
+
+    let [foo] = [];
+    foo // undefined
+
+    let [bar, foo] = [1];
+    foo // undefined
+
+    let [foo = true] = [];
+    foo // true
+
+    let [x, y = 'b'] = ['a']; // x='a', y='b'
+    let [x, y = 'b'] = ['a', undefined]; // x='a', y='b'
+  </script>
+</body>
+
+</html>

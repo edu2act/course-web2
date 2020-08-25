@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //for...of循环，允许遍历获得键值
+    //可以遍历数组、Set 和 Map 结构、某些类似数组的对象、字符串
+    //对于普通的对象，for...of结构不能直接使用，会报错，必须部署了 Iterator 接口后才能使用。
+
+
+    //遍历数组
+    var arr = ['a', 'b', 'c', 'd'];
+
+    for (let a in arr) {
+      console.log(a); // 0 1 2 3
+    }
+
+    for (let a of arr) {
+      console.log(a); // a b c d
+    }
+
+    //遍历arguments类似数组
+    // arguments对象
+    function printArgs() {
+      for (let x of arguments) {
+        console.log(x);
+      }
+    }
+    printArgs('a', 'b');
+        // 'a'
+        // 'b'
+  </script>
+</body>
+
+</html>

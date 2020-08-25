@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      function getXHR() {
+        var xhr;
+        if (window.XMLHttpRequest) {
+          xhr = new XMLHttpRequest();
+        } else {
+          xhr = new ActiveXObjext('Microsoft.XMLHttp');
+        }
+        return xhr;
+      }
+      //get请求
+      var ajax = getXHR();
+      ajax.open('get', 'shuju.json', true);
+
+      //post请求
+      var ajax = getXHR();
+      ajax.open('post', 'shuju.json', true);
+      ajax.setRequestHeader('Content-Type', 'application/-www-form-urlencoded'); //默认 可不写
+      ajax.setRequestHeader('Content-Type', 'multipart/form-data'); //带图片等文件
+      ajax.setRequestHeader('Content-type', 'application/json; charset=utf-8'); //编码可写可不写
+    </script>
+  </body>
+</html>

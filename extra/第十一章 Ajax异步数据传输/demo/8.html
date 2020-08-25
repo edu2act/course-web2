@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        function getXHR() {
+            var xhr;
+            if (window.XMLHttpRequest) {
+                xhr = new XMLHttpRequest();
+            } else {
+                xhr = new ActiveXObjext('Microsoft.XMLHttp');
+            }
+            return xhr;
+        }
+        //第一步：创建XMLHttpReques对象
+        var ajax = getXHR();
+        //第二步：创建请求
+        ajax.open("get", "./data.json", true);
+        //第三步：发送请求
+        ajax.send(null);
+        //第四步：接受响应执行回调函数——当状态改变时自动触发该函数
+        ajax.onreadystatechange = function () {
+            if (ajax.readyState == 4 && ajax.status == 200) { //接受数据成功条件
+                var txt = ajax.responseText;//字符串
+                var data = JSON.parse(txt); //json数据解析为js对象
+                console.log(data);
+
+                //其他DOM操作
+            }
+        }
+    </script>
+</body>
+
+</html>

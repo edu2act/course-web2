@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //对象解构语法在赋值语句的左侧使用对象字面量
+    let url = { username: "小红", password: "123455" };
+
+    let { username, password } = url;
+
+    console.log(username); //"小红"
+    console.log(password); //"123455"
+
+
+    //解构不成功，变量的值就等于 undefined
+    let { foo } = { bar: 'baz' };
+    foo // undefined  // 因为没有找到键值为foo的属性
+
+
+    //解构赋值允许指定默认值  ——  当数组/对象成员严格等于undefined，默认值才会生效
+    //默认值生效的条件是，对象的属性值严格等于undefined。
+
+    var { x = 3 } = {};
+    x // 3
+
+    var { x, y = 5 } = { x: 1 };
+    x // 1
+    y // 5
+
+    var { x, y = 2 } = { x: 1, y: undefined };
+    y //2
+
+
+    var { x, y = 2 } = { x: 1, y: null };
+    y //null
+
+    var { msg = 'Something went wrong' } = {};
+    msg // "Something went wrong"
+
+
+
+    // 赋值给和属性不同的本地变量（别名）
+    //对象解构赋值时变量必须与对象的属性同名，才能取到正确的值。
+    let { bar, foo } = { foo: 'aaa', bar: 'bbb' };
+    foo // "aaa"
+    bar // "bbb"
+
+    let { baz } = { foo: 'aaa', bar: 'bbb' };
+    baz // undefined
+
+    //如果变量名与属性名不一致，必须写成下面这样
+    let { foo: baz } = { foo: 'aaa', bar: 'bbb' };
+    baz // "aaa"
+    foo //ReferenceError: foo is not defined
+
+    let obj = { first: 'hello', last: 'world' };
+    let { first: f, last: l } = obj;
+    f // 'hello'
+    l // 'world'
+
+    //对象的解构赋值是下面形式的简写
+    let { foo: foo, bar: bar } = { foo: 'aaa', bar: 'bbb' };
+    let { foo, bar } = { foo: 'aaa', bar: 'bbb' };
+    //对象的解构赋值的内部机制，是先找到同名属性，然后再赋给对应的变量。真正被赋值的是后者，而不是前者。
+
+    let { foo: baz } = { foo: 'aaa', bar: 'bbb' };
+    baz // "aaa"
+    foo // error: foo is not defined
+        //上面代码中，foo是匹配的模式，baz才是变量。真正被赋值的是变量baz，而不是模式foo。
+  </script>
+</body>
+
+</html>

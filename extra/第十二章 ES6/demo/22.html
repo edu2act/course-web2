@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //例1
+    const foo = 'bar';
+    const baz = { foo };
+    baz // {foo: "bar"}
+
+    // 等同于
+    const baz = { foo: foo };
+
+    //例2
+    const o = {
+      method() {
+        return "Hello!";
+      }
+    };
+    // 等同于
+    const o = {
+      method: function () {
+        return "Hello!";
+      }
+    };
+
+
+
+    //例3
+    let birth = '2000/01/01';
+
+    const Person = {
+      name: '张三',
+      //等同于birth: birth
+      birth,
+      // 等同于hello: function ()...
+      hello() {
+        console.log('我的名字是', this.name);
+      }
+    };
+  </script>
+</body>
+
+</html>

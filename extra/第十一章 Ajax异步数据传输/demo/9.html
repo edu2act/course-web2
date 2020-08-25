@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 50px;
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" />
+  </head>
+
+  <body>
+    <div class="table-responsive container">
+      <table class="table table-bordered table-hover" id="table">
+        <tr>
+          <th class="col-md-1">序号</th>
+          <th class="col-md-1">题目</th>
+          <th class="col-md-3">内容</th>
+          <th class="col-md-1">作者</th>
+        </tr>
+      </table>
+    </div>
+    <script>
+      //数据处理
+      function callback(data) {
+        var table = document.getElementById('table');
+        for (var i = 0; i < data.length; i++) {
+          var tr = table.insertRow();
+          td = tr.insertCell();
+          td.innerHTML = i + 1;
+          td = tr.insertCell();
+          td.innerHTML = data[i].title;
+          td = tr.insertCell();
+          td.innerHTML = data[i].content.replace(/\|/g, '<br/>');
+          td = tr.insertCell();
+          td.innerHTML = data[i].authors;
+        }
+      }
+
+      var ajax = new XMLHttpRequest();
+      ajax.open('get', './data.json', true);
+      ajax.send(null);
+      ajax.onreadystatechange = function () {
+        if (ajax.readyState == 4 && ajax.status == 200) {
+          //接受数据成功条件
+          var txt = ajax.responseText; //字符串
+          var jsonData = JSON.parse(txt); //json数据解析为js对象
+          callback(jsonData);
+        }
+      };
+    </script>
+  </body>
+</html>

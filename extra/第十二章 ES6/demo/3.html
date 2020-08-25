@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            padding-top: 50px;
+            text-align: center;
+        }
+
+        div {
+            width: 400px;
+            height: 350px;
+            border: 5px solid red;
+            margin: 0 auto;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            width: 100px;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            cursor: pointer;
+        }
+
+        li.active {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            text-align: center;
+            margin-top: 100px;
+            font-size: 44px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li class="active">导航0</li>
+            <li>导航1</li>
+            <li>导航2</li>
+            <li>导航3</li>
+        </ul>
+        <p id="contents">点击了0</p>
+    </div>
+    <script>
+        //练习
+        var tabs = document.getElementsByTagName("li");
+        var contents = document.getElementById("contents");
+
+        //for循环中var声明变量改为let声明变量
+        for (let i = 0; i < tabs.length; i++) {
+            // ! function (i) { //IIFE start
+            tabs[i].onclick = function () {
+                for (var j = 0; j < tabs.length; j++) {
+                    tabs[j].className = "";
+                }
+                this.className = "active";
+                contents.innerHTML = "点击了" + i;
+            };
+            // }(i); //IIFE end
+        }
+
+
+        
+        console.log(i); //ReferenceError: i is not defined
+    </script>
+</body>
+
+</html>

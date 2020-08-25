@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body {
+      padding: 50px;
+    }
+
+    button {
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="btn">按钮</button>
+  <script>
+    //定时器回调函数调用时，函数上下文是window对象。
+
+    var btn = document.getElementById("btn");
+    var a = 100;
+    btn.onclick = function () {
+      var a = 300;
+      console.log(this);//btn
+
+      var show = () => {
+        console.log(this);
+      }
+      setTimeout(show, 3000);
+    }
+  </script>
+</body>
+
+</html>
